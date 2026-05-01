@@ -414,20 +414,51 @@
 ### Tasks
 
 	1. R&D for third party library to get device's details like:
-		a. Battery Status in percentage
-		b. CPU Usages Status in percentage
-		c. Memory Usages Status in percentage
-		d. Storage Usage Status in percentage
-		e. Temperature in Celcius
-		f. WIFI Connection Status - Good | Bad
-		g. Peripherals status 
-			i. Camera - On | Off
-			ii. Scale - Ok | Not Ok
-			iii. Printer - Ok | Not Ok*
-		h. Network Details
-			i. Status - Online | Offline
-			ii. Signal Strength - in dBm
-			iii. IP address - IPv4
+		a. Battery Status in percentage - battery charge level of the device : Get by function `DeviceInfo.getBatteryLevel()`
+		b. CPU Usages Status in percentage - cpu usage of the device : Not found yet
+		c. Memory Usages Status in percentage - RAM / primary memory of the device. : Get by functions `DeviceInfo.getUsedMemory()` and `DeviceInfo.getTotalMemory()`
+		d. Storage Usage Status in percentage - ROM memory of the devices : Get by functions `DeviceInfo.getTotalDiskCapacity()` and `DeviceInfo.getFreeDiskStorage()`
+		e. Temperature in Celcius - temperature of the device : Not Found Yet
+		f. WIFI Connection Status - Good | Bad on the bases of the connectivity strength : Get by device-info
+		g. Peripherals status* - TBD
+			i. Camera - On | Off status of the device : Get by function `DeviceInfo.isCameraPresent()`
+			ii. Scale* - Ok | NotOk status of the device : Not needed as device is android based
+			iii. Printer* - Ok | Not Ok status of the device : Not needed as device is android based
+		h. Firware
+			i. Current - current version of the firware : Get by sdk request `queryDeviceInformation`.
+			ii. Updated - date of updation of the firware : Not found
+			iii. Status - checks for the availablity of new version. : Not found
+		i. Network Details - TBD
+			i. Status - Online | Offline : Get by NetInfo.isConnected
+			ii. Signal Strength - in dBm : 
+			iii. IP address - IPv4 : Get by function `DeviceInfo.getIpAddress()`
+			iv. Heartbeat - Time when the application was run for first time. :  (new Data()).now() for first time when the api is hit.
+
+
+| Status                   | Description                               | Confirmation | Getting from                                                              | Comment                                     |
+| ------------------------ | ----------------------------------------- | ------------ | ------------------------------------------------------------------------- | ------------------------------------------- |
+| Battery Status           | battery charge level of the device        | Confirmed    | `DeviceInfo.getBatteryLevel()`                                            | —                                           |
+| CPU Usage Status         | cpu usage of the device                   | TBD          | —                                                                         | Not found yet                               |
+| Memory Usage Status      | RAM / primary memory of the device        | Confirmed    | `DeviceInfo.getUsedMemory()` and `DeviceInfo.getTotalMemory()`            | —                                           |
+| Storage Usage Status     | ROM memory of the device                  | Confirmed    | `DeviceInfo.getTotalDiskCapacity()` and `DeviceInfo.getFreeDiskStorage()` | —                                           |
+| Temperature              | temperature of the device                 | TBD          | —                                                                         | Not found yet                               |
+| WIFI Connection Status   | Good | Bad based on connectivity strength | Confirmed    | device-info                                                               | Strength classification logic may be needed |
+| Peripherals Status       | overall peripherals status                | Confirmed    | —                                                                         | TBD                                         |
+| Peripherals: Camera      | On | Off status of the device             | Confirmed    | `DeviceInfo.isCameraPresent()`                                            | —                                           |
+| Peripherals: Scale       | Ok | NotOk status of the device           | Confirmed    | —                                                                         | Not needed (Android-based device)           |
+| Peripherals: Printer     | Ok | Not Ok status of the device          | Confirmed    | —                                                                         | Not needed (Android-based device)           |
+| Firmware: Current        | current version of the firmware           | Confirmed    | sdk request `queryDeviceInformation`                                      | —                                           |
+| Firmware: Updated        | date of firmware update                   | TBD          | —                                                                         | Not found                                   |
+| Firmware: Status         | availability of new version               | TBD          | —                                                                         | Not found                                   |
+| Network Details          | overall network details                   | Confirmed    | —                                                                         | TBD                                         |
+| Network: Status          | Online | Offline                          | Confirmed    | `NetInfo.isConnected`                                                     | —                                           |
+| Network: Signal Strength | signal strength in dBm                    | TBD          | —                                                                         | Not found                                   |
+| Network: IP Address      | IPv4 address                              | Confirmed    | `DeviceInfo.getIpAddress()`                                               | —                                           |
+| Network: Heartbeat       | first app run timestamp                   | Confirmed    | `(new Date()).now()`                                                      | Capture when API is first hit               |
+
+
+
+> **Note**: **DeviceInfo** refers to *react-native-device-info* and **NetInfo** refers to *@react-native-community/netinfo*
 
 <img src="./DeviceDetailsDashboard.png" width="1080" heigth="320" />
 
