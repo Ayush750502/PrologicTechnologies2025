@@ -36,8 +36,8 @@ type phone_number = {
   4.3 **Cart checkout / payment update from the cart -** notification will be send to the mobile app for getting update for payment success.
 
 
-5. promo code - yet to be tested
+5. promo code - not yet enabled
 
-6. transactions - yet to be tested
+6. transactions - not yet enabled
 
-7. Edit profile form and apis - yet to be tested.
+7. Edit profile form and apis - yet to resolve.
