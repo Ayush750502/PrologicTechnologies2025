@@ -435,6 +435,8 @@
 			iv. Heartbeat - Time when the application was run for first time. :  (new Data()).now() for first time when the api is hit.
 
 
+### Tasks Table:
+
 | Status                   | Description                               | Confirmation | Getting from                                                              | Comment                                     |
 | ------------------------ | ----------------------------------------- | ------------ | ------------------------------------------------------------------------- | ------------------------------------------- |
 | Battery Status           | battery charge level of the device        | Confirmed    | `DeviceInfo.getBatteryLevel()`                                            | —                                           |
@@ -442,17 +444,17 @@
 | Memory Usage Status      | RAM / primary memory of the device        | Confirmed    | `DeviceInfo.getUsedMemory()` and `DeviceInfo.getTotalMemory()`            | —                                           |
 | Storage Usage Status     | ROM memory of the device                  | Confirmed    | `DeviceInfo.getTotalDiskCapacity()` and `DeviceInfo.getFreeDiskStorage()` | —                                           |
 | Temperature              | temperature of the device                 | TBD          | —                                                                         | Not found yet                               |
-| WIFI Connection Status   | Good | Bad based on connectivity strength | Confirmed    | device-info                                                               | Strength classification logic may be needed |
+| WIFI Connection Status   | Good or Bad based on connectivity strength | TBD         |    	—                                                               | `NetInfo.strength` |
 | Peripherals Status       | overall peripherals status                | Confirmed    | —                                                                         | TBD                                         |
-| Peripherals: Camera      | On | Off status of the device             | Confirmed    | `DeviceInfo.isCameraPresent()`                                            | —                                           |
-| Peripherals: Scale       | Ok | NotOk status of the device           | Confirmed    | —                                                                         | Not needed (Android-based device)           |
-| Peripherals: Printer     | Ok | Not Ok status of the device          | Confirmed    | —                                                                         | Not needed (Android-based device)           |
+| Peripherals: Camera      | On or Off status of the device             | Confirmed    | `DeviceInfo.isCameraPresent()`                                            | —                                           |
+| Peripherals: Scale       | Ok or NotOk status of the device           | Confirmed    | —                                                                         | Not needed (Android-based device)           |
+| Peripherals: Printer     | Ok or Not Ok status of the device          | Confirmed    | —                                                                         | Not needed (Android-based device)           |
 | Firmware: Current        | current version of the firmware           | Confirmed    | sdk request `queryDeviceInformation`                                      | —                                           |
 | Firmware: Updated        | date of firmware update                   | TBD          | —                                                                         | Not found                                   |
 | Firmware: Status         | availability of new version               | TBD          | —                                                                         | Not found                                   |
 | Network Details          | overall network details                   | Confirmed    | —                                                                         | TBD                                         |
-| Network: Status          | Online | Offline                          | Confirmed    | `NetInfo.isConnected`                                                     | —                                           |
-| Network: Signal Strength | signal strength in dBm                    | TBD          | —                                                                         | Not found                                   |
+| Network: Status          | Online or Offline                          | Confirmed    | `NetInfo.isConnected`                                                     | —                                           |
+| Network: Signal Strength | signal strength in dBm                    | TBD          | `NetInfo.linkSpeed`                                                                         | —                                           |
 | Network: IP Address      | IPv4 address                              | Confirmed    | `DeviceInfo.getIpAddress()`                                               | —                                           |
 | Network: Heartbeat       | first app run timestamp                   | Confirmed    | `(new Date()).now()`                                                      | Capture when API is first hit               |
 
@@ -461,153 +463,3 @@
 > **Note**: **DeviceInfo** refers to *react-native-device-info* and **NetInfo** refers to *@react-native-community/netinfo*
 
 <img src="./DeviceDetailsDashboard.png" width="1080" heigth="320" />
-
-
-## Device Health Monitoring Hook (React Native)
-
-### 📌 Overview
-This document outlines the implementation of a `useDeviceHealth` hook that collects device metrics and sends them to a backend API.
-
-The solution is designed to:
-- Use available React Native libraries
-- Gracefully handle platform limitations
-- Provide a scalable and production-ready structure
-
----
-
-### 🧱 Tech Stack
-
-#### Core Libraries
-- react-native-device-info
-- @react-native-community/netinfo (recommended)
-
-#### Optional Enhancements
-- react-native-network-info (for IP)
-- react-native-ble-plx (for peripherals)
-- Native modules (Android-only advanced metrics)
-
----
-
-### ⚠️ Limitations
-
-| Feature | Android | iOS |
-|--------|--------|-----|
-| CPU Usage | ✅ (native only) | ❌ |
-| Temperature | ⚠️ limited | ❌ |
-| Signal Strength | ✅ | ❌ |
-| Camera Status | ❌ | ❌ |
-
----
-
-### 🧠 Data Model
-
-```ts
-export interface DeviceHealthPayload {
-  battery: number;
-  memoryUsage: number;
-  storageUsage: number;
-  isConnected: boolean;
-  ipAddress?: string;
-
-  // Optional / Android-only
-  cpuUsage?: number;
-  temperature?: number;
-  signalStrength?: number;
-
-  timestamp: number;
-}
-
-```
-
-### ⚙️ Utility Function
-
-```ts
-export const calculatePercentage = (used: number, total: number) => {
-  if (!total) return 0;
-  return (used / total) * 100;
-};
-```
-
-### 🔌 Device Health Service
-
-```ts
-import DeviceInfo from 'react-native-device-info';
-import NetInfo from '@react-native-community/netinfo';
-
-export const getDeviceHealthData = async () => {
-  const battery = await DeviceInfo.getBatteryLevel();
-
-  const usedMemory = await DeviceInfo.getUsedMemory();
-  const totalMemory = await DeviceInfo.getTotalMemory();
-
-  const totalStorage = await DeviceInfo.getTotalDiskCapacity();
-  const freeStorage = await DeviceInfo.getFreeDiskStorage();
-
-  const netState = await NetInfo.fetch();
-
-  return {
-    battery,
-    memoryUsage: (usedMemory / totalMemory) * 100,
-    storageUsage: ((totalStorage - freeStorage) / totalStorage) * 100,
-    isConnected: netState.isConnected ?? false,
-    timestamp: Date.now(),
-  };
-};
-```
-
-### 🔁 API Service
-
-```ts
-import axios from 'axios';
-
-export const sendDeviceHealth = async (payload: any) => {
-  try {
-    await axios.post('/device/health', payload);
-  } catch (error) {
-    console.log('Failed to send device health', error);
-  }
-};
-```
-
-### 🪝 useDeviceHealth Hook
-
-```ts
-import { useEffect, useRef } from 'react';
-import { getDeviceHealthData } from '../services/deviceHealthService';
-import { sendDeviceHealth } from '../services/apiService';
-
-export const useDeviceHealth = (interval = 30000) => {
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
-
-  const collectAndSend = async () => {
-    const data = await getDeviceHealthData();
-    await sendDeviceHealth(data);
-  };
-
-  useEffect(() => {
-    collectAndSend();
-
-    timerRef.current = setInterval(() => {
-      collectAndSend();
-    }, interval);
-
-    return () => {
-      if (timerRef.current) {
-        clearInterval(timerRef.current);
-      }
-    };
-  }, []);
-};
-```
-
-### 🚀 Usage
-
-```ts
-import { useDeviceHealth } from './hooks/useDeviceHealth';
-
-const App = () => {
-  useDeviceHealth(30000); // every 30 sec
-
-  return null;
-};
-```
