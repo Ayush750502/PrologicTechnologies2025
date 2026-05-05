@@ -35,6 +35,10 @@ type phone_number = {
 
   4.3 **Cart checkout / payment update from the cart -** notification will be send to the mobile app for getting update for payment success.
 
+  4.4 **Cart login via number / otp** - notification will be send on successfull shopper login.
+
+> Note: in these scenarios the mobile app is in foreground and user is logged in the mobile app.
+
 
 5. promo code - not yet enabled
 
