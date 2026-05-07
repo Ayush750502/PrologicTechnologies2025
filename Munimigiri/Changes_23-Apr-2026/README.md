@@ -8,7 +8,8 @@
 ## Bussiness (live)
  testmehakprologic@yopmail.com
 
-## Total modification count: 8 screens. (Time: 50 | Days: 6.25)
+## Total modification count: 8 screens. (Time: 50 \
+| Days: 6.25)
 	1. ✅ Bussiness Dashboard 2 hr
 	2. ✅ OutSourcing Request Form* 8 hr
 	3. ✅ Backend Support Form* 8 hr
