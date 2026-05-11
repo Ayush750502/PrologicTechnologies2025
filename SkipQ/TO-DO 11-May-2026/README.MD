@@ -1,6 +1,8 @@
 # What to do? 2026 05 11
 
-1. health api integration:
+## 1. health api integration:
+
+**API Interval:** 60 seconds
 
 ```cmd
 curl --location --request PUT 'http://192.168.1.148:8000/device/health' \
