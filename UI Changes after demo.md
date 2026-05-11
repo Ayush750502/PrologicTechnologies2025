@@ -1,36 +1,36 @@
-UI Changes after demo
+# UI Changes after demo
 
 ## Login Screen:
 ### Current:
-	a. On number length validation , trick button Clear button toggles to trick mark button
-	b. No help on header
+	a. [X] On number length validation , trick button Clear button toggles to trick mark button
+	b. [X] No help on header
 ### Changes:
-	a. On number length validation , another start button will be shown and will enable disable according to the validation.
-	b. Help button on header
+	a. [X] On number length validation , another start button will be shown and will enable disable according to the validation.
+	b. [X] Help button on header
 ---
 ## OTP Screen:
 ### Current:
-	a. On number length validation , trick button Clear button toggles to trick mark button
+	a. [X] On number length validation , trick button Clear button toggles to trick mark button
 ### Changes:
-	a. On number length validation , another start button will be shown and will enable disable according to the validation.
+	a. [X] On number length validation , another start button will be shown and will enable disable according to the validation.
 ---
 ## Pop Ups:
 ### Current:
-	a. Help button shown on modal overlay.
-	b. Video orientation and rotation is not defined.
+	a. [X] Help button shown on modal overlay.
+	b. [ ]Video orientation and rotation is not defined.
 ### Changes:
-	a. Help button will be shown inside the modal container.
-	b. Setting video orientation to 4:3 and rotation to 90 degrees.
+	a. [X] Help button will be shown inside the modal container.
+	b. [X] Setting video orientation to 4:3 and rotation to 90 degrees.
 ---
 ## Cart Screen:
 ### Current: 
-	a. No red dot is shown.
-	b. On cart list empty message - "Your cart is empty."
+	a. [X] No red dot is shown.
+	b. [X] On cart list empty message - "Your cart is empty."
 ### Changes:
-	a. Red Dots will be shown for those product which are rejected by  HIL.
-	b. On cart list empty message - "Scan your first item to start shopping."
+	a. [X] Red Dots will be shown for those product which are rejected by  HIL.
+	b. [X] On cart list empty message - "Scan your first item to start shopping."
 ---
-## New features:
+## [X] New features:
 ### HIL Mode:
 	a. Listening to Scan QR from the scanner for employee authentication.
 	b. QR will be checked against employee and their cart will change into HIL Cart Interface.
