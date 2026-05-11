@@ -443,7 +443,7 @@
 | CPU Usage Status         | cpu usage of the device                   | TBD          | —                                                                         | Not found yet                               |
 | Memory Usage Status      | RAM / primary memory of the device        | Confirmed    | `DeviceInfo.getUsedMemory()` and `DeviceInfo.getTotalMemory()`            | —                                           |
 | Storage Usage Status     | ROM memory of the device                  | Confirmed    | `DeviceInfo.getTotalDiskCapacity()` and `DeviceInfo.getFreeDiskStorage()` | —                                           |
-| Temperature              | temperature of the device                 | TBD          | —                                                                         | Not found yet                               |
+| Temperature              | temperature of the device                 | TBD          | —                                                                         | react-native-device-thermal                               |
 | WIFI Connection Status   | Good or Bad based on connectivity strength | TBD         |    	—                                                               | `NetInfo.strength` |
 | Peripherals Status       | overall peripherals status                | Confirmed    | —                                                                         | TBD                                         |
 | Peripherals: Camera      | On or Off status of the device             | Confirmed    | `DeviceInfo.isCameraPresent()`                                            | —                                           |
