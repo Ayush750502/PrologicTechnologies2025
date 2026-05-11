@@ -1247,17 +1247,52 @@ body .markdown-body
 </style><title>README</title></head><body data-theme="auto"><article class="markdown-body"><h1 id="tasks-skipq-mobile-app">Tasks: (SkipQ Mobile App)<a class="headerlink" href="#tasks-skipq-mobile-app" title="Permanent link"></a></h1>
 <h2 id="lists-of-tasks-provided">Lists of tasks provided:<a class="headerlink" href="#lists-of-tasks-provided" title="Permanent link"></a></h2>
 <ol>
-<li>Branding</li>
+<li>Branding - Yet to decide how the parameters will be mapped with the components for proper UI configuration.</li>
 </ol>
 <hr />
 <h2 id="to-do">To-Do<a class="headerlink" href="#to-do" title="Permanent link"></a></h2>
 <ol>
+<li>✅ get all product api - hit only when cart id is available. </li>
+</ol>
+<div class="highlight"><pre>  <span class="kr">const</span> <span class="p">{</span> <span class="nx">data</span>: <span class="kt">allProducts</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useGetAllProductApi</span><span class="p">({</span>
+      <span class="nx">qurey</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">cartId</span>: <span class="kt">route?.params?.cartId</span><span class="p">,</span>
+      <span class="p">},</span>
+    <span class="p">});</span>
+</pre></div>
+
+<ol start="2">
 <li>
-<p>Testing of over current api versions</p>
+<p>create intend - getting 200 status for no product found</p>
 </li>
 <li>
-<p>get all product api - hit only when cart id is available. 
-<div class="highlight"><pre>
-</pre></div></p>
+<p>phone number api - currently we are sending the concatinated string of both country code and phone number, but now we need it in the edit profile section in separated ways.</p>
+</li>
+</ol>
+<div class="highlight"><pre>  <span class="nx">type</span> <span class="nx">phone_number</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">country_code</span> : <span class="kt">number</span><span class="p">;</span>
+    <span class="kt">number</span><span class="o">:</span> <span class="kt">number</span><span class="p">;</span>
+  <span class="p">}</span>
+</pre></div>
+
+<ol start="4">
+<li>Cart in and out actions update</li>
+</ol>
+<p><strong>4.1 on logout from the cart -</strong> notification will be send to the mobile to logout the from app simultaneously.</p>
+<p><strong>4.2 mobile app is active and user login using number / otp in the device -</strong> notification will be send when the user logs in the cart.</p>
+<p><strong>4.3 Cart checkout / payment update from the cart -</strong> notification will be send to the mobile app for getting update for payment success.</p>
+<p><strong>4.4 Cart login via number / otp</strong> - notification will be send on successfull shopper login.</p>
+<blockquote>
+<p>Note: in these scenarios the mobile app is in foreground and user is logged in the mobile app.</p>
+</blockquote>
+<ol start="5">
+<li>
+<p>promo code - not yet enabled</p>
+</li>
+<li>
+<p>transactions - not yet enabled</p>
+</li>
+<li>
+<p>Edit profile form and apis - yet to resolve.</p>
 </li>
 </ol></article></body></html>

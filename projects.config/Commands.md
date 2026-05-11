@@ -3,6 +3,9 @@
 > npx react-native-asset
 for linking assets with react native project.
 
+> npm run android -- --deviceId __deviceID__  or npm run android -- --device __deviceID__
+for running 
+
 > emulator -avd __emulated_device_name__ -gpu off
 for running emulated device while it's gpu is off
 

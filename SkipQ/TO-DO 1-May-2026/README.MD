@@ -2,7 +2,7 @@
 
 ## Lists of tasks provided:
 
-1. Branding
+1. Branding - Yet to decide how the parameters will be mapped with the components for proper UI configuration.
 
 ---
 
@@ -31,13 +31,11 @@
 
 4. Cart in and out actions update
 
-  **4.1 on logout from the cart -** notification will be send to the mobile to logout the from app simultaneously.
+  **4.1 on logout from the cart -(TBD: Rajiv Sir)** notification will be send to the mobile to logout the from app simultaneously.
 
-  **4.2 mobile app is active and user login using number / otp in the device -** notification will be send when the user logs in the cart.
+  **4.2 mobile app is active and user login using number / otp in the device -(TBD: Ajay)** notification will be send when the user logs in the cart.
 
-  **4.3 Cart checkout / payment update from the cart -** notification will be send to the mobile app for getting update for payment success.
-
-  **4.4 Cart login via number / otp** - notification will be send on successfull shopper login.
+  **4.3 Cart checkout / payment update from the cart -(TBD: Ajay)** notification will be send to the mobile app for getting update for payment success.
 
 > Note: in these scenarios the mobile app is in foreground and user is logged in the mobile app.
 
