@@ -2,7 +2,10 @@
 
 ## 1. health api integration:
 
+<img src='../TO-DO 30-Apr-2026 /DeviceDetailsDashboard.png' />
+
 **API Interval:** 60 seconds
+
 
 ```cmd
 curl --location --request PUT 'http://192.168.1.148:8000/device/health' \
