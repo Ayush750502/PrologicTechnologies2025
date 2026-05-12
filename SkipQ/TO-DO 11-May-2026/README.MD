@@ -67,35 +67,35 @@ curl --location --request PUT 'http://192.168.1.148:8000/device/health' \
 
 // What we need to share
 {
-  "deviceId" ✔ : "396374202667616254",
+  "deviceId" : "396374202667616254", // ✔
 
-  "battery" ✔ : 75,
+  "battery" : 75, // ✔
   "cpu": 56, // library not yet found
-  "memory" ✔ : 89,
-  "storage" ✔ : 49,
+  "memory" : 89, // ✔
+  "storage" : 49, // ✔
   "temperature": 32, // to be tested react-native-device-thermal
   "wifi": "weak", // to be tested @react-native-community/netinfo
 
-  "status" ✔ : "offline", // to be tested @react-native-community/netinfo
+  "status" : "offline", // to be tested @react-native-community/netinfo // ✔
 
-  "firmwareVersion" ✔ : "FW-2.1.4",
+  "firmwareVersion" : "FW-2.1.4", // ✔
   "firmwareStatus": "outdated",
 
-  "ipAddress" ✔ : "192.168.1.25",
+  "ipAddress" : "192.168.1.25", // ✔
   "signalStrength": 12, // to be tested @react-native-community/netinfo
 
   "peripherals": {
-    "camera" ✔ : true,
+    "camera" : true, // ✔
     "scale": false,
     "printer": false
   },
 
   "cpuLoad": 97, // library not yet found
   "cpuTemp": 89, // library not yet found
-  "ramUsage" ✔ : 95,
+  "ramUsage" : 95, // ✔
   "gpuLoad": 92, // library not yet found
   "gpuTemp": 85, // library not yet found
 
-  "version" ✔ : "1.0.9"
+  "version" : "1.0.9" // ✔
 }
 ```
