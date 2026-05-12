@@ -41,3 +41,58 @@ curl --location --request PUT 'http://192.168.1.148:8000/device/health' \
 }'
 ```
 
+<img src="netinfo-working.png" />
+
+``` json
+// Currently we are getting 
+{
+    "battery": 100,
+    "memory": 8,
+    "ramUsage": 8,
+    "storage": 29,
+    "ipAddress": "192.168.1.121",
+    "peripherals": {
+        "camera": true,
+        "scale": false,
+        "printer": false
+    },
+    "version": "1.0",
+    "deviceId": "396374202667616254",
+    "firmwareVersion": "TKQ1.240727.V1.0.1",
+    "status": "online"
+}
+
+// What we need to share
+{
+  "deviceId" ✔ : "396374202667616254",
+
+  "battery" ✔ : 75,
+  "cpu": 56, // library not yet found
+  "memory" ✔ : 89,
+  "storage" ✔ : 49,
+  "temperature": 32, // to be tested react-native-device-thermal
+  "wifi": "weak", // to be tested @react-native-community/netinfo
+
+  "status" ✔ : "offline", // to be tested @react-native-community/netinfo
+
+  "firmwareVersion" ✔ : "FW-2.1.4",
+  "firmwareStatus": "outdated",
+
+  "ipAddress" ✔ : "192.168.1.25",
+  "signalStrength": 12, // to be tested @react-native-community/netinfo
+
+  "peripherals": {
+    "camera" ✔ : true,
+    "scale": false,
+    "printer": false
+  },
+
+  "cpuLoad": 97, // library not yet found
+  "cpuTemp": 89, // library not yet found
+  "ramUsage" ✔ : 95,
+  "gpuLoad": 92, // library not yet found
+  "gpuTemp": 85, // library not yet found
+
+  "version" ✔ : "1.0.9"
+}
+```

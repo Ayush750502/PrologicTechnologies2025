@@ -10,8 +10,10 @@
 
 5. (BUG) On logout or session end of the cart we are not deleting the proofs --> use `{event: "deleteSessionProof"}`[5.1.19 Delete all proof resources] for deleting all proofs from the device.
 
-6. ✓ (BUG) On item removal anomally flow - when user comes in adjust quantity modal , user is able to confirm without adjust the quantity of the product.
+6. ✓ ~~(BUG) On item removal anomally flow - when user comes in adjust quantity modal , user is able to confirm without adjust the quantity of the product.~~
 
-7. ✓ (BUG) On item removal anomally flow - when user selects `I have removed a product` and the user selects the removed product via scanning or from the list , and comes in adjust quantity modal , on confiming the quantity, the event which is passed to the api is of add product and the tag is bulkDrop. , 
+7. ✓ ~~(BUG) On item removal anomally flow - when user selects `I have removed a product` and the user selects the removed product via scanning or from the list , and comes in adjust quantity modal , on confiming the quantity, the event which is passed to the api is of add product and the tag is bulkDrop. , ~~
 
-8. ✓ (BUG) Scanner is getting closed when we are contining shopping after the staff dashboard.
+8. ✓ ~~(BUG) Scanner is getting closed when we are contining shopping after the staff dashboard.~~
+
+9. (BUG) Show Loader when user clicks on "Cancel" button while closing "Personal Item" modal
