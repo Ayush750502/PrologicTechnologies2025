@@ -41,7 +41,7 @@ curl --location --request PUT 'http://192.168.1.148:8000/device/health' \
 }'
 ```
 
-<img src="netinfo-working.png" />
+<img src="netInfo-working.png" />
 
 ``` json
 // Currently we are getting 
