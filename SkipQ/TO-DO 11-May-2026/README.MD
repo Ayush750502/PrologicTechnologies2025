@@ -74,15 +74,15 @@ curl --location --request PUT 'http://192.168.1.148:8000/device/health' \
   "memory" : 89, // ✔
   "storage" : 49, // ✔
   "temperature": 32, // getting null value in react-native-device-thermal
-  "wifi": "weak", // can be determined by strength in @react-native-community/netinfo
+  "wifi": "weak", // ✔ can be determined by strength in @react-native-community/netinfo
 
-  "status" : "offline", // we are getting @react-native-community/netinfo
+  "status" : "offline", // ✔ we are getting @react-native-community/netinfo
 
   "firmwareVersion" : "FW-2.1.4", // ✔
   "firmwareStatus": "outdated", // should be computable from backend.
 
   "ipAddress" : "192.168.1.25", // ✔
-  "signalStrength": 12, // in @react-native-community/netinfo the signal strength is not in dBm
+  "signalStrength": 12, // ✔ in @react-native-community/netinfo the signal strength is not in dBm
 
   "peripherals": {
     "camera" : true, // ✔
