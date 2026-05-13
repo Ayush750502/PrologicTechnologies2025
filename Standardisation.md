@@ -11,7 +11,7 @@
 
 ### Project Structure:
 
-```
+```console
 src // developement code
 ├── components // common components used in the code
 │   ├── Header
@@ -39,7 +39,7 @@ src // developement code
 │   ├── currency.ts
 │   └── env.ts
 ├── features // features using in the application
-│   ├── (feature_name)
+│   ├── __feature_name__
 │   │   ├── api // api functions used for this feature.
 │   │   │   └── authService.ts
 │   │   ├── components // components used for this feature
