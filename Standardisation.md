@@ -4,11 +4,9 @@
 
 ### Branches :
 
-1. `{'feat' | 'fix' | 'style' | 'refactor' | 'test' | 'docs' | 'chore'}/{developer name}/{going on update}`
+1. `{'feat' | 'fix' | 'style' | 'refactor' | 'test' | 'docs' | 'chore'}/{developer name}/{update_specific_name}`
 
 2. 
-
-
 ---
 
 ### Project Structure:
@@ -187,12 +185,12 @@ src // developement code
 │       │   └── useStaffDashboardStyle.ts
 │       └── store
 │           └── staffSlice.ts
-├── i18n
+├── i18n // internationalisation used in the project.
 │   ├── index.ts
 │   └── locales
 │       ├── ar.json
 │       └── en.json
-├── lib
+├── lib // external services or functions used in this project.
 │   ├── apiErrorHandler.ts
 │   ├── axios.ts
 │   ├── hanshow
@@ -206,9 +204,9 @@ src // developement code
 │   └── socket
 │       ├── socketManager.ts
 │       └── SocketProvider.tsx
-├── providers
+├── providers // provider components for dynamic instances.
 │   └── AppProvider.tsx
-├── routes
+├── routes // managing navigation throughtout the views or screens
 │   ├── AppNavigator.tsx
 │   ├── AuthNavigator.tsx
 │   ├── RootNavigator.tsx
@@ -220,19 +218,19 @@ src // developement code
 ├── stores
 │   ├── hooks.ts
 │   └── store.ts
-├── theme
-│   ├── animations.ts
-│   ├── colors.ts
-│   ├── components.ts
-│   ├── index.ts
-│   ├── layout.ts
-│   ├── shadows.ts
-│   ├── spacing.ts
-│   └── typography.ts
-├── types
+├── theme // setting style and theme data of the application.
+│   ├── animations.ts // animation styles
+│   ├── colors.ts // colors used throught out the application
+│   ├── components.ts // styling for screens or components used thorughtout the application
+│   ├── index.ts // for handling export of the styles.
+│   ├── layout.ts // styling for layouts used in the application
+│   ├── shadows.ts // styling for handling shadows
+│   ├── spacing.ts // styling for maintaining spacing 
+│   └── typography.ts // stylin
+├── types // common type used througth the application
 │   ├── apiTypes.ts
 │   └── staffTypes.ts
-└── utils
+└── utils // helper functions or data used in the application
     ├── colorShades.ts
     ├── constants
     │   ├── currency.ts
