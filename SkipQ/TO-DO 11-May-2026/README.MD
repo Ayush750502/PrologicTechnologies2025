@@ -99,3 +99,26 @@ curl --location --request PUT 'http://192.168.1.148:8000/device/health' \
   "version" : "1.0.9" // ✔
 }
 ```
+
+## 2. api on PersonelItem Continue and loader on Personel Item modal is closed:
+
+
+### Api for continue personel item:
+```cmd
+curl --location 'http://192.168.1.27:8000/cart/68602/addProduct' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTE0LCJpYXQiOjE3NTc1ODI0NzAsImV4cCI6MTc1ODE4NzI3MH0.4M_gd0qV7nDj-fi-casQjmMAIAOHr4zrpAIKD4DLf6E' \
+--header 'isShopper: true' \
+--header 'Content-Type: application/json' \
+--data '{
+    "productId": null,
+    "quantity": 1,
+    "scanned": true,
+    "dropped": true,
+    "status": 0,
+    "event": "addedProductsDetected",
+    "tag": "personalItemSkipped",
+    "chainId": 1777967764105,
+    "proofId": null
+}'
+```
+
