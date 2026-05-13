@@ -1,6 +1,6 @@
 # What to do? 2026 05 11
 
-## 1. health api integration:
+## 1. health api integration (Partially done) :
 
 <img src='../TO-DO 30-Apr-2026 /DeviceDetailsDashboard.png' />
 
@@ -121,4 +121,3 @@ curl --location 'http://192.168.1.27:8000/cart/68602/addProduct' \
     "proofId": null
 }'
 ```
-
