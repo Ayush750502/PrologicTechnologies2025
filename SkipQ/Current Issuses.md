@@ -12,7 +12,7 @@
 
 6. ✓ ~~(BUG) On item removal anomally flow - when user comes in adjust quantity modal , user is able to confirm without adjust the quantity of the product.~~
 
-7. ✓ ~~(BUG) On item removal anomally flow - when user selects `I have removed a product` and the user selects the removed product via scanning or from the list , and comes in adjust quantity modal , on confiming the quantity, the event which is passed to the api is of add product and the tag is bulkDrop. , ~~
+7. ✓ ~~(BUG) On item removal anomally flow - when user selects `I have removed a product` and the user selects the removed product via scanning or from the list , and comes in adjust quantity modal , on confiming the quantity, the event which is passed to the api is of add product and the tag is bulkDrop. ,~~
 
 8. ✓ ~~(BUG) Scanner is getting closed when we are contining shopping after the staff dashboard.~~
 
