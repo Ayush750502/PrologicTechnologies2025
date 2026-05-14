@@ -17,3 +17,7 @@
 8. ✓ ~~(BUG) Scanner is getting closed when we are contining shopping after the staff dashboard.~~
 
 9. ✓ ~~(BUG) Show Loader when user clicks on "Cancel" button while closing "Personal Item" modal.~~
+
+10. (BUG) In Events List of a product in staff flow Video is not running in loop.
+
+11. (ENHANCEMENT) Video is tilted 90 degrees, needed to rotate it -90 degrees.
