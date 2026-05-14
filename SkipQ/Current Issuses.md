@@ -20,4 +20,4 @@
 
 10. (BUG) In Events List of a product in staff flow Video is not running in loop.
 
-11. (ENHANCEMENT) Video is tilted 90 degrees, needed to rotate it -90 degrees.
+11. (ENHANCEMENT) Video is tilted 90[^o], needed to rotate it -90[^o].
