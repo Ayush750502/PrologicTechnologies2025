@@ -2,7 +2,7 @@
 
 1. (BUG) On item added without scan --> Asking user for what have you added --> user selected I have added a product --> for product not found it is openning modal for item scanned with previously scanned item not the current one(as product is not found).
 
-2. (ENHANCEMENT) Clearing the previous chain details (like proof path, previous scanned item etc.) once the chain is clear.
+2. ✓ ~~(ENHANCEMENT) Clearing the previous chain details (like proof path, previous scanned item etc.) once the chain is clear.~~
 
 3. ✓ ~~(BUG) Prices are not in 2 decimal places.~~
 
