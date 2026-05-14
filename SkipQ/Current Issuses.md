@@ -8,7 +8,7 @@
 
 4. (BUG) Currency Symbol should be confirgurable via branding api.
 
-5. ~~(BUG) On logout or session end of the cart we are not deleting the proofs --> use `{event: "deleteSessionProof"}`[5.1.19 Delete all proof resources] for deleting all proofs from the device.~~ "No need as beginTracking event deletes all the previous proofs."
+5. ~~(BUG) On logout or session end of the cart we are not deleting the proofs --> use `{event: "deleteSessionProof"}`[5.1.19 Delete all proof resources] for deleting all proofs from the device.~~ `No need as beginTracking event deletes all the previous proofs.`
 
 6. ✓ ~~(BUG) On item removal anomally flow - when user comes in adjust quantity modal , user is able to confirm without adjust the quantity of the product.~~
 
