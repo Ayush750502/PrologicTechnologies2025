@@ -31,4 +31,10 @@ flowchart TD
     E -->|true| A
 ```
 
+## 2. Branding in mobile app:
 
+## 3. Checklist implementation for Device Condition and components testing before device allocation:(TBD)
+
+## 4. Payment implementation in both mobile and hanshow device:(TBD)
+
+## 5. IOS project implementation:(TBD)
