@@ -25,7 +25,7 @@ flowchart TD
     B --> C[" Register device with serial number API"]
 
     C -->|success| D[" Listen for 'device-allocated' event"]
-
+    
     D --> E{"serialNumber from event === device serialNo ?"}
 
     E -->|true| A

@@ -1,6 +1,6 @@
 # Current Issuses[Since: April / 10 / 2026]:
 
-1. (BUG) On item added without scan --> Asking user for what have you added --> user selected I have added a product --> for product not found it is openning modal for item scanned with previously scanned item not the current one(as product is not found).
+1. **(BUG) Apis are not handled for their negative scenarios in shopping flow like:** On item added without scan --> Asking user for what have you added --> user selected I have added a product --> for product not found it is openning modal for item scanned with previously scanned item not the current one(as product is not found).
 
 2. ✓ ~~(ENHANCEMENT) Clearing the previous chain details (like proof path, previous scanned item etc.) once the chain is clear.~~
 
