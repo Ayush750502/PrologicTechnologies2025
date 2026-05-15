@@ -6,6 +6,7 @@
 
 **API Interval:** 60 seconds
 
+> Need to send charging status as well.
 
 ```cmd
 curl --location --request PUT 'http://192.168.1.148:8000/device/health' \
@@ -100,6 +101,8 @@ curl --location --request PUT 'http://192.168.1.148:8000/device/health' \
 }
 ```
 
+Android Version 
+
 ## 2. api on PersonelItem Continue and loader on Personel Item modal is closed:
 
 
@@ -121,3 +124,23 @@ curl --location 'http://192.168.1.27:8000/cart/68602/addProduct' \
     "proofId": null
 }'
 ```
+
+### Backend flow condition
+
+when shopper is putting atleast one personel item in the cart , then we are not hitting this api.
+
+## 3. Register Device Api.
+
+```cmd
+curl --location 'http://192.168.1.27:8000/device/register-device' \
+--header 'Content-Type: application/json' \
+--data '{
+  "deviceId": "396374202667616250",
+  "status": "online",
+  "is_inshopping_mode": null,
+  "created_by": null,
+  "deviceInfo": null
+}'
+```
+
+implementing register device api at Device status screen.
