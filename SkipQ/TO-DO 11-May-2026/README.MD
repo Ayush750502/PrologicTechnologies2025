@@ -128,19 +128,3 @@ curl --location 'http://192.168.1.27:8000/cart/68602/addProduct' \
 ### Backend flow condition
 
 when shopper is putting atleast one personel item in the cart , then we are not hitting this api.
-
-## 3. Register Device Api.
-
-```cmd
-curl --location 'http://192.168.1.27:8000/device/register-device' \
---header 'Content-Type: application/json' \
---data '{
-  "deviceId": "396374202667616250",
-  "status": "online",
-  "is_inshopping_mode": null,
-  "created_by": null,
-  "deviceInfo": null
-}'
-```
-
-implementing register device api at Device status screen.
