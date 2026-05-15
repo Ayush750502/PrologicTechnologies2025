@@ -20,13 +20,15 @@ curl --location 'http://192.168.1.27:8000/device/register-device' \
 ```mermaid
 flowchart TD
 
-    A["1. useDeviceBootstrap"] -->|failed| B["2. Device Not Registered"]
+    A[" useDeviceBootstrap"] -->|failed| B[" Device Not Registered"]
 
-    B --> C["3. Register device with serial number API"]
+    B --> C[" Register device with serial number API"]
 
-    C -->|success| D["4. Listen for 'device-allocated' event"]
+    C -->|success| D[" Listen for 'device-allocated' event"]
 
     D --> E{"serialNumber from event === device serialNo ?"}
 
     E -->|true| A
 ```
+
+
