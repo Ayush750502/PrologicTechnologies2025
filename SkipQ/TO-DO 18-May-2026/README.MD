@@ -11,6 +11,12 @@ title: Node
 flowchart LR
 	A[Testing Application with device]
 	B[Register device]
+	C[Shipping]
+	D[Activation]
+	E[Shopping]
+
+	A --> B --> C --> D --> E
+
 ```
 
 ## 2. Device checking with application:
@@ -23,3 +29,5 @@ Testing of the device compoenents with application
 ### d. Camera Testing - using Native Code
 ### e. Touch Testing - using Native Code
 ### f. NFC Testing - using Native Code
+
+## 3. Device Health Timer & checks for device activation:
