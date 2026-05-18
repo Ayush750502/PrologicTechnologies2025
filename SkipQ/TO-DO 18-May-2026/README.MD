@@ -4,6 +4,13 @@
 
 <img src='./image.png' />
 
+```mermaid
+---
+title: Node
+---
+flowchart LR
+    id
+```
 
 ## 2. Device checking with application:
 
