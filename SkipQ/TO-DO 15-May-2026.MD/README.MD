@@ -35,6 +35,12 @@ flowchart TD
 
 ## 3. Checklist implementation for Device Condition and components testing before device allocation:(TBD)
 
+1. camera check - native code
+2. scanner check - sdk
+3. light check - sdk 
+4. touch check - native code
+5. display testing - native code
+
 ## 4. Payment implementation in both mobile and hanshow device:(TBD)
 
 ## 5. IOS project implementation:(TBD)
