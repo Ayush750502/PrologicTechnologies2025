@@ -9,7 +9,8 @@
 title: Node
 ---
 flowchart LR
-    A[Testing Application with device] ---> B[Register device]
+	A[Testing Application with device]
+	B[Register device]
 ```
 
 ## 2. Device checking with application:
