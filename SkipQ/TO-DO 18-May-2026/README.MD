@@ -8,7 +8,7 @@
 ---
 title: Node
 ---
-flowchart LR
+flowchart TD
 	A[Testing Application with device]
 	B[Register device]
 	C[Shipping]
