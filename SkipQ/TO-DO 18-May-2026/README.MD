@@ -9,7 +9,7 @@
 title: Node
 ---
 flowchart LR
-    id
+    [Testing Application with device] ---> [Register device]
 ```
 
 ## 2. Device checking with application:
