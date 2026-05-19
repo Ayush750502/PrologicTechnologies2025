@@ -29,10 +29,10 @@ flowchart TD
 	D{{Pending Activation}}
 	D1[Activated]
 	D2[Application Mode]
-	D21[Test]
+	D21[Trial]
 	D211[Dummy Login]
 	D212[Shopping Flow]
-	D22[Trial]
+	D22[Testing]
 	D221[Staff Login]
 	D23[Production]
 	D231[Phone Login]
