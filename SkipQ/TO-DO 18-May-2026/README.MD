@@ -1,6 +1,6 @@
 # TO DO
 
-## 1. Device Lift Cycle Implementation:(TBD)
+## 1. Device Lift Cycle Implementation:
 
 <img src='./image.png' />
 
@@ -131,6 +131,10 @@ This is when are getting device has arrived in warehouse and before it could be 
 	3. LED
 	4. Network
 
+**API**
+```curl
+```
+
 Then it will go for registration flow.
 
 ### B. Device Registration Flow
@@ -157,11 +161,19 @@ This is where we have a final check whether the device is working fine for the o
 	3. Phycally Device Mounting
 
 These check points are for on ground team to make ensure that the device is working fine before it's activation.
+
+**API**
+```curl
+```
+
 Once it is confirmed from the staff's end , we are going to move to activation flow
 
 ### D. Activation Flow
 
 Here we wait for admin to activate the device for usage
+
+```json
+```
 
 Once the admin activates the device , the we go to welcome screen.
 
