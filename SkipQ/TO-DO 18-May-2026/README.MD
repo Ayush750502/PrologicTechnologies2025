@@ -120,7 +120,7 @@ flowchart TD
 
 ```
 
-### A. Peripherals Checking(Not in priority)
+### A. Peripherals Checking:(Not in priority)
 
 This is when are getting device has arrived in warehouse and before it could be used, it is testing for it's peripheral components to be working fine or not
 
