@@ -92,7 +92,6 @@ flowchart TD
 	style A3 fill:#BFDBFE,color:#111827,stroke:#2563EB
 	style A4 fill:#BFDBFE,color:#111827,stroke:#2563EB
 	style A5 fill:#BFDBFE,color:#111827,stroke:#2563EB
-	style A6 fill:#BFDBFE,color:#111827,stroke:#2563EB
 
 	style B2 fill:#FDBA74,color:#111827,stroke:#EA580C
 
