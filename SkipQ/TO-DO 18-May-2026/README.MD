@@ -38,10 +38,9 @@ flowchart TD
 	D231[Phone Number Login]
 	D232[QR Login]
 	D233[Checkout & Payments]
+	D24[Maintainance]
 
-	E{{Device Working}}
-
-	A --> B --> C --> D --> E
+	A --> B --> C --> D
 
 	A --> A1 --> A2 --> A3 --> A4 --> A5 --> A6
 
@@ -56,6 +55,8 @@ flowchart TD
 	D2 --> D22
 
 	D2 --> D23
+
+	D2 --> D24
 
 	D21 --> D211
 
