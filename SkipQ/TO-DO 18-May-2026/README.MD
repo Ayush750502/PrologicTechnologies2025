@@ -150,6 +150,7 @@ Once the shippment is confirmed then we will go for installation flow.
 This is where we have a final check whether the device is working fine for the on ground environment
 
 **CheckList Contains**
+
 	1. Network Connection
 	2. Power Connectino
 	3. Phycally Device Mounting
