@@ -120,15 +120,7 @@ flowchart TD
 
 ```
 
-## 2. Device checking with application:
+## 2. Device Health Timer & checks for device activation:
 
-Testing of the device compoenents with application
-
-### a. Scanner Testing(*) - using SDK
-### b. Light Testing(*) - using SDK
-### c. Display Testing - using Native Code
-### d. Camera Testing(*) - using Native Code
-### e. Touch Testing - using Native Code
-### f. NFC Testing (TBD) - using Native Code
-
-## 3. Device Health Timer & checks for device activation:
+	a. We will get the time duration for device health api from the get device details.
+	b. adjust the states and time interval for hitting the api accordingly.
