@@ -172,6 +172,8 @@ Once it is confirmed from the staff's end , we are going to move to activation f
 
 Here we wait for admin to activate the device for usage
 
+**EVENT**
+
 ```json
 ```
 
