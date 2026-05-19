@@ -185,10 +185,10 @@ Here we are going to enable the functionalities of the device's main usage accor
 
 **Device Active Modes**
 
-	1. **Trial** - Allows Provisional ID Login and Only Disable Checkout and Staff Login functionality 
-	2. **Testing** - Allows Provisional ID Login and Staff Login and only disables Checkout functionality
-	3. **Production** - All main feature are active and allows phone / otp number login and checkout and billing
-	4. **Maintenance** - Here we are going to show a screen telling the user that applicaiton is in maintainance state and wait for admin to change the state of the device to some other state.
+	1. Trial - Allows Provisional ID Login and Only Disable Checkout and Staff Login functionality 
+	2. Testing - Allows Provisional ID Login and Staff Login and only disables Checkout functionality
+	3. Production - All main feature are active and allows phone / otp number login and checkout and billing
+	4. Maintenance - Here we are going to show a screen telling the user that applicaiton is in maintainance state and wait for admin to change the state of the device to some other state.
 
 
 
