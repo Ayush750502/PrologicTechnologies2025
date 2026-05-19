@@ -120,7 +120,7 @@ flowchart TD
 
 ```
 
-### A. Peripherals Checking
+### A. Peripherals Checking(Not in priority)
 
 This is when are getting device has arrived in warehouse and before it could be used, it is testing for it's peripheral components to be working fine or not
 
@@ -190,6 +190,8 @@ Here we are going to enable the functionalities of the device's main usage accor
 	3. Production - All main feature are active and allows phone / otp number login and checkout and billing
 	4. Maintenance - Here we are going to show a screen telling the user that applicaiton is in maintainance state and wait for admin to change the state of the device to some other state.
 
+> Note:
+> - We will show mode on header except for production.
 
 
 ## 2. Device Health Timer & checks for device activation:
