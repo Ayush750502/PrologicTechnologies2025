@@ -15,8 +15,7 @@ flowchart TD
 	A2[Camera Check]
 	A3[Scanner Check]
 	A4[LED Check]
-	A5[NFC Check]
-	A6[Network Check]
+	A5[Network Check]
 
 	B{{Device Not registered}}
 	B1[Register Device]
@@ -43,7 +42,7 @@ flowchart TD
 
 	A --> B --> C --> D
 
-	A --> A1 --> A2 --> A3 --> A4 --> A5 --> A6
+	A --> A1 --> A2 --> A3 --> A4 --> A5
 
 	B --> B1 --> B2
 
