@@ -9,7 +9,7 @@
 title: Device Life Cycle Flow
 ---
 flowchart TD
-	A[In-warehouse]
+	A{{In-warehouse}}
 	A1[Peripherals Checking]
 	A2[Camera Check]
 	A3[Scanner Check]
@@ -17,23 +17,23 @@ flowchart TD
 	A5[NFC Check]
 	A6[Network Check]
 
-	B[Device Not registered]
+	B{{Device Not registered}}
 	B1[Register Device]
 	B2[Allocated]
 
-	C[Device Installation]
+	C{{Device Installation}}
 	C1[Network Connected Check]
 	C2[Power Connected Check]
 	C3[Physically Mounted Check]
 
-	D[Pending Activation]
+	D{{Pending Activation}}
 	D1[Activated]
 	D2[Application Mode]
 	D21[Test]
 	D22[Trial]
 	D23[Production]
 
-	E[Device Working]
+	E{{Device Working}}
 
 	A --> B --> C --> D --> E
 
