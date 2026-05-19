@@ -30,8 +30,14 @@ flowchart TD
 	D1[Activated]
 	D2[Application Mode]
 	D21[Test]
+	D211[Dummy Login]
+	D212[Shopping Flow]
 	D22[Trial]
+	D221[Staff Login]
 	D23[Production]
+	D231[Phone Login]
+	D232[QR Login]
+	D233[Checkout & Payments]
 
 	E{{Device Working}}
 
@@ -51,16 +57,34 @@ flowchart TD
 
 	D2 --> D23
 
+	D21 --> D211
+
+	D21 --> D212
+
+	D22 --> D211
+
+	D22 --> D212
+
+	D22 --> D221
+
+	D23 --> D231
+
+	D23 --> D232
+
+	D23 --> D221
+
+	D23 --> D233
+
 ```
 
 ## 2. Device checking with application:
 
 Testing of the device compoenents with application
 
-### a. Scanner Testing* - using SDK
-### b. Light Testing* - using SDK
+### a. Scanner Testing(*) - using SDK
+### b. Light Testing(*) - using SDK
 ### c. Display Testing - using Native Code
-### d. Camera Testing* - using Native Code
+### d. Camera Testing(*) - using Native Code
 ### e. Touch Testing - using Native Code
 ### f. NFC Testing (TBD) - using Native Code
 
