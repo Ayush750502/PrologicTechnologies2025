@@ -29,11 +29,11 @@ flowchart TD
 	D{{Pending Activation}}
 	D1[Activated]
 	D2[Application Mode]
-	D21[Trial]
-	D211[Dummy Login]
+	D21[Testing]
+	D211[Provisional ID Login]
 	D212[Shopping Flow]
-	D22[Testing]
-	D221[Staff Login]
+	D213[Staff Login]
+	D22[Trial]
 	D23[Production]
 	D231[Phone Number Login]
 	D232[QR Login]
@@ -61,17 +61,21 @@ flowchart TD
 
 	D21 --> D212
 
+	D21 --> D213
+
 	D22 --> D231
 
-	D22 --> D212
+	D22 --> D232
 
-	D22 --> D221
+	D22 --> D212
 
 	D23 --> D231
 
 	D23 --> D232
 
-	D23 --> D221
+	D23 --> D212
+
+	D23 --> D213
 
 	D23 --> D233
 
