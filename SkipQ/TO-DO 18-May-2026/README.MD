@@ -35,7 +35,7 @@ flowchart TD
 	D22[Testing]
 	D221[Staff Login]
 	D23[Production]
-	D231[Phone Login]
+	D231[Phone Number Login]
 	D232[QR Login]
 	D233[Checkout & Payments]
 
@@ -61,7 +61,7 @@ flowchart TD
 
 	D21 --> D212
 
-	D22 --> D211
+	D22 --> D231
 
 	D22 --> D212
 
