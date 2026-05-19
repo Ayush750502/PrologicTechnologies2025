@@ -7,7 +7,9 @@
 ```mermaid
 ---
 title: Device Life Cycle Flow
----flowchart TD
+---
+
+flowchart TD
 	A{{In-warehouse}}
 	A1[Peripherals Checking]
 	A2[Camera Check]
