@@ -198,3 +198,88 @@ Here we are going to enable the functionalities of the device's main usage accor
 
 	a. We will get the time duration for device health api from the get device details.
 	b. adjust the states and time interval for hitting the api accordingly.
+
+## 3. Payment enabling :
+
+
+
+Full Payment Flow (UI → API)
+```
+CheckOut.tsx                    PaymentDetails.tsx                    Backend + Stripe
+     │                               │                                      │
+     │  tap "Checkout"               │                                      │
+     ├──────────────────────────────►│                                      │
+     │                               │                                      │
+     │                               │  1. GET /card/get-cards-detail/{id}  │
+     │                               ├─────────────────────────────────────►│
+     │                               │◄────── { cards: SavedCard[] } ───────┤
+     │                               │                                      │
+     │                               │  User selects card / enters details  │
+     │                               │  tap "Pay"                           │
+     │                               │                                      │
+     │                               │  2. POST /card/create-intent         │
+     │                               ├─────────────────────────────────────►│
+     │                               │◄── { client_secret: { id, secret }} ─┤
+     │                               │                                      │
+     │                               │  3. Stripe.confirmPayment(           │
+     │                               │       clientSecret,                  │
+     │                               │       { paymentMethodId,             │
+     │                               │         billingDetails }             │
+     │                               │     )                                │
+     │                               │          ───────► Stripe API ◄───────┤
+     │                               │                                      │
+     │                               │  4. POST /cart/{id}/soldProducts     │
+     │                               │     (paymentStatus: 1 or 0)          │
+     │                               ├─────────────────────────────────────►│
+     │                               │◄── { order_id, ... } ────────────────┤
+     │                               │                                      │
+     │                               │  5. socket: ORDER_COMPLETED          │
+     │                               │     ───────► Backend Socket ◄────────┤
+     │                               │                                      │
+     │  navigate(PAYMENT_SUCCESS)    │                                      │
+     │◄──────────────────────────────┤                                      │
+```
+
+### get cards api:
+
+```cmd
+curl --location 'http://192.168.1.27:8000/card/get-cards-detail/78282' \
+--header 'Authorization: Bearer {{token}}'
+```
+
+
+### create payment intent:
+
+```cmd
+curl --location 'http://192.168.1.27:8000/card/create-intent' \
+--header 'Authorization: Bearer {token}' \
+--header 'Content-Type: application/json' \
+--data '{
+    "cartId": "{cartId}",
+    "shopperId": "{shopperId}"
+  }'
+```
+
+
+### products sold:
+
+```cmd
+curl --location 'http://192.168.1.27:8000/cart/68988/soldProducts' \
+--header 'Authorization: Bearer {token}' \
+--header 'Content-Type: application/json' \
+--data '{
+    "cartId": "{cartId}",
+    "shopperId": "{shopperId}",
+    "promo_code": "PROMO10",
+    "paymentMethodId": "pm_xxx",
+    "PaymentIntentId": "pi_xxx",
+    "paymentType": "card",
+    "transcationDetails": {},
+    "deviceId": "{deviceId}",
+    "paymentStatus": 1,
+    "reason": "",
+    "code": "",
+    "discount": 0
+  }'
+```
+Key detail: Stripe confirmation (step 3) happens client-side via @stripe/stripe-react-native using the client_secret from the backend. The backend never sees the raw card number — only the paymentMethodId or token from Stripe.
