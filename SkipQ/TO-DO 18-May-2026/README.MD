@@ -201,8 +201,6 @@ Here we are going to enable the functionalities of the device's main usage accor
 
 ## 3. Payment enabling :
 
-
-
 Full Payment Flow (UI → API)
 ```
 CheckOut.tsx                    PaymentDetails.tsx                    Backend + Stripe
@@ -268,14 +266,14 @@ curl --location 'http://192.168.1.27:8000/cart/68988/soldProducts' \
 --header 'Authorization: Bearer {token}' \
 --header 'Content-Type: application/json' \
 --data '{
-    "cartId": "{cartId}",
-    "shopperId": "{shopperId}",
-    "promo_code": "PROMO10",
+    "cartId": "{{cartId}}",
+    "shopperId": "{{shopperId}}",
+    "promo_code": "{{promo_code}}",
     "paymentMethodId": "pm_xxx",
     "PaymentIntentId": "pi_xxx",
     "paymentType": "card",
     "transcationDetails": {},
-    "deviceId": "{deviceId}",
+    "deviceId": "{{deviceId}}",
     "paymentStatus": 1,
     "reason": "",
     "code": "",
@@ -283,3 +281,6 @@ curl --location 'http://192.168.1.27:8000/cart/68988/soldProducts' \
   }'
 ```
 Key detail: Stripe confirmation (step 3) happens client-side via @stripe/stripe-react-native using the client_secret from the backend. The backend never sees the raw card number — only the paymentMethodId or token from Stripe.
+
+> IMPORTANT
+> Enable it for mobile payment as well
