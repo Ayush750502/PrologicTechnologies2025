@@ -33,3 +33,7 @@ export default function consoleDebug(type : keyof typeof logSymbolism, logSymbol
 JSON.stringify(data, null, 3);
 
 ```
+
+```js
+console.log("%cContent","color: blue; font-size: 20px;") // For blue color text
+```

@@ -20,6 +20,6 @@
 
 10. (BUG) In Events List of a product in staff flow Video is not running in loop.
 
-11. (ENHANCEMENT) Video is tilted 90 degree, needed to rotate it -90 degree.
+11. ✓ ~~(ENHANCEMENT) Video is tilted 90 degree, needed to rotate it -90 degree.~~
 
 12. (MAINTAINANCE) Old device details native module clean up.

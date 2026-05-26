@@ -163,7 +163,8 @@ This is where we have a final check whether the device is working fine for the o
 These check points are for on ground team to make ensure that the device is working fine before it's activation.
 
 **API**
-```curl
+```cmd
+curl --location --request POST 'http://192.168.1.27:8000/device-installation/39637420266761625408/complete'
 ```
 
 Once it is confirmed from the staff's end , we are going to move to activation flow
