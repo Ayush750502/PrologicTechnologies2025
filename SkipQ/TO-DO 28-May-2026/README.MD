@@ -8,11 +8,25 @@ Deleting of unused or dead code
 
 Too many index.ts or index.tsx files with no need for them.
 
+**Correct usage**
+
+{{modal_name}}/
+	index.ts - exporting all file
+	{{modal_name}}file1.ts
+	{{modal_name}}file2.ts
+	{{modal_name}}file3.ts
+	{{modal_name}}file4.ts
+
+**Current usage**
+
+{{modal_name}}/
+	index.ts - holding all the functional code and exporting it directly.
+
+---
+
 ## 3. Folder Structure
 
 Maintaining files in a proper folder structure.
-
----
 
 ### Current folder structure
 
@@ -236,40 +250,40 @@ src/
 
 **1. features/ -** storing the functions, api calling, ui componenets including screens inside it which are directly used inside the feature or directly related to it.
 
-{{features_name}}/
-    a. tanstack/
-          keys/
-              {{features_name}}MutationKeys.ts
-              {{features_name}}QueryKeys.ts
-          queries/
-              use{{api_name}}.ts
-          mutation/
-              use{{api_name}}.ts
-    b. views/
-        screens/
-          {{screen_name}}
-              {{screen_name}}.tsx
-              use{{screen_name}}Style.tsx
-              use{{screen_name}}.ts
-        components/
-            {{component_name}}/
-                {{component_name}}.tsx
-                use{{component_name}}.ts
-                {{component_name}}Style.tsx
-        modals/
-            {{modal_name}}/
-                {{modal_name}}.tsx
-                use{{modal_name}}.ts
-                use{{modal_name}}Style.ts
-    c. atom/
-        {{features_name}}Atom.ts
-    d. types/
-        {{features_name}}Types.ts
-    e. components/
-        {{component_name}}/
-            {{component_name}}.tsx
-            use{{component_name}}.ts
-            {{component_name}}Style.tsx
+	{{features_name}}/
+    	a. tanstack/
+          	keys/
+              	{{features_name}}MutationKeys.ts
+              	{{features_name}}QueryKeys.ts
+          	queries/
+              	use{{api_name}}.ts
+          	mutation/
+              	use{{api_name}}.ts
+    	b. views/
+        	screens/
+          	{{screen_name}}
+              	{{screen_name}}.tsx
+              	use{{screen_name}}Style.tsx
+              	use{{screen_name}}.ts
+        	components/
+            	{{component_name}}/
+                	{{component_name}}.tsx
+                	use{{component_name}}.ts
+                	{{component_name}}Style.tsx
+        	modals/
+            	{{modal_name}}/
+                	{{modal_name}}.tsx
+                	use{{modal_name}}.ts
+                	use{{modal_name}}Style.ts
+    	c. atom/
+        	{{features_name}}Atom.ts
+    	d. types/
+        	{{features_name}}Types.ts
+    	e. components/
+        	{{component_name}}/
+            	{{component_name}}.tsx
+            	use{{component_name}}.ts
+            	{{component_name}}Style.tsx
 
 **2. utils/** - for constanting constants and helper functions.
 
@@ -279,13 +293,15 @@ src/
         env.ts
         constants.ts
 
-**3. components/** - for storing shared compoenents throughtout the project.
+**3. shared/** - for storing shared elements used throughtout the project.
 
-{{component_name}}/
-            {{component_name}}.tsx
-            use{{component_name}}.ts
-            {{component_name}}Style.tsx
-
+	a. components/
+		{{component_name}}/
+		            {{component_name}}.tsx
+		            use{{component_name}}.ts
+		            {{component_name}}Style.tsx
+    b. theme/ - for storing the theme structure like colors, typography, layouts,etc.
+    c. services/ - for handling third party services like notifications.
 
 **4. api/ -** for storing file used for api calling.
 
@@ -294,16 +310,11 @@ src/
         {{feature_name}}.ts - for storing api endpoints feature wise.
 
 **5. routes/ -** For root navigaition handling for the whole application
-    
-    a. RootNavigation - For storing navigaiton container for using navigation in the application
+
+	a. RootNavigation - For storing navigaiton container for using navigation in the application
     b. Routes.ts - For storing the list of the navigaitions string used in the applicaition.
 
 **6. atom/ -** for storing the common atom states used throught the application.
-
-**7. theme/ -** for storing the theme structure like colors, typography, layouts,etc.
-
-
-**8. services/ -** for handling third party services like notifications.
 
 
 ### Features used in application
