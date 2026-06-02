@@ -379,3 +379,191 @@ Must follow proper typescript for solid code foundation.
 
 Must have inline documentation of code for proper code understanding.
 
+---
+---
+
+# Proposed Implementation Plan - Architecture & Folder Structure Refactoring
+
+This plan details the reorganization of the codebase into a clean, feature-driven folder structure, deletion of dead code, consolidation/renaming of barrel files, and segregation of screen/component logic into dedicated hooks.
+
+## User Review Required
+
+> [!IMPORTANT]
+> - All imports across the application (`App.tsx`, `src/routes/RootNavigation.tsx`, screens, hooks, components) will be updated to reflect the new feature-based structure.
+> - The intermediate API calling layer under `src/api/functions/` is eliminated, and endpoints from `src/api/endpoints/` are consolidated into a feature-wise endpoints folder under `src/api/endpoints/`.
+> - Functional code currently in `index.tsx` files has already been moved to named files (like `LoginScreen.tsx`), but we will make sure no nested component has redundant `index.tsx` files holding functional code.
+
+## Proposed Folder Structure Pattern
+
+We will restructure `src/` to follow this layout:
+- `src/features/`
+  - `auth/` (Login, OTP verification, Logout, Delete account)
+  - `cart/` (Scan to connect, Cart list, Scan modal)
+  - `cards/` (Add new card, Card listing, Set primary, Delete card)
+  - `payments/` (Checkout, Payment complete, Transaction/Order history)
+  - `profile/` (Profile detail, Edit profile, Privacy policy, Terms & conditions)
+- `src/shared/`
+  - `components/` (CommonHeader, CurrencyText, AppButton, LoaderComponent, SuccessModal, WarnAlert, WrapperContainer)
+  - `theme/` (colors, typography, useColors)
+  - `services/` (notifications/useNotificationHandler)
+- `src/api/`
+  - `api.ts` (base Axios instance/callApi)
+  - `endpoints/` (auth.ts, cart.ts, cards.ts, payments.ts, profile.ts)
+- `src/routes/`
+  - `RootNavigation.tsx`
+  - `BottomTabs.tsx`
+  - `useAuthCheck.ts`
+  - `useBranding.ts`
+- `src/atom/` (common state atoms like brandingAtom, colorsAtom, authAtom)
+- `src/utils/` (common helper functions and constants)
+
+---
+
+## Proposed Changes
+
+### 1. Dead Code Clean Up
+- [DELETE] `src/views/components/useButtonSectionStyles.ts` (as the component `ButtonSection.tsx` is already dead/removed).
+- Any other detected unused files will be removed.
+
+### 2. API Endpoints Feature-wise Segregation
+- [NEW] `src/api/endpoints/auth.ts` containing authentication-related endpoints.
+- [NEW] `src/api/endpoints/cart.ts` containing cart-related endpoints.
+- [NEW] `src/api/endpoints/cards.ts` containing card-related endpoints.
+- [NEW] `src/api/endpoints/payments.ts` containing payment-related endpoints.
+- [NEW] `src/api/endpoints/profile.ts` containing profile-related endpoints.
+- [DELETE] `src/api/endpoints.ts` (consolidated).
+
+### 3. Migrating and Grouping to Features
+We will move files into their respective features under `src/features/`.
+
+#### **Auth Feature (`src/features/auth/`)**
+- `hooks/keys/authMutationKeys.ts` (consolidated auth mutation keys)
+- `hooks/mutation/useLogin.ts` (containing the login TanStack mutation hook)
+- `hooks/mutation/useVerifyCode.ts` (containing OTP verify TanStack mutation hook)
+- `hooks/mutation/useLogout.ts` (containing logout TanStack mutation hook)
+- `hooks/mutation/useDeleteAccount.ts` (shopper account deletion mutation)
+- `views/screens/LoginScreen/`
+  - `LoginScreen.tsx`
+  - `useLoginScreenStyle.ts`
+  - `useLoginScreen.ts`
+- `views/screens/VerifyCodeScreen/`
+  - `VerifyCodeScreen.tsx`
+  - `useVerifyCodeScreenStyle.ts`
+  - `useVerifyCodeScreen.ts`
+
+#### **Cart Feature (`src/features/cart/`)**
+- `hooks/keys/cartKeys.ts` (Query & Mutation keys)
+- `hooks/queries/useGetAllProduct.ts`
+- `hooks/queries/useGetLastActiveCart.ts`
+- `hooks/mutation/useLinkDevice.ts`
+- `hooks/mutation/useApplyPromo.ts`
+- `hooks/mutation/useDeleteProduct.ts`
+- `views/screens/ScanCartScreen/`
+  - `ScanCartScreen.tsx`
+  - `useScanCartStyle.ts`
+  - `useScanCart.ts`
+  - `hooks/` (helpers, types, app state listener for scan cart)
+- `views/screens/CartScreen/`
+  - `CartScreen.tsx`
+  - `useCartScreenStyle.ts`
+  - `useCartScreen.ts` (extracted logic from CartScreen.tsx)
+- `views/modals/CameraScanner/`
+  - `CameraScanner.tsx`
+  - `useCameraScannerStyle.ts`
+
+#### **Cards Feature (`src/features/cards/`)**
+- `hooks/keys/cardsKeys.ts`
+- `hooks/queries/useGetCardDetails.ts`
+- `hooks/mutation/useAddCardDetails.ts`
+- `hooks/mutation/useSetCardAsPrimary.ts`
+- `hooks/mutation/useDeleteCard.ts`
+- `views/screens/AddCardScreen/`
+  - `AddCardScreen.tsx`
+  - `useAddCardScreenStyle.ts`
+  - `useAddCardScreen.ts`
+  - `components/AddCardValidation.ts`
+- `views/screens/ManageCardsScreen/`
+  - `ManageCardsScreen.tsx`
+  - `useManageCardsScreenStyle.ts`
+  - `useManageCardsScreen.ts`
+- `views/modals/AddCardModal/`
+  - `AddCardModal.tsx`
+  - `useAddCardModalStyle.ts`
+- `views/modals/ManageCardModal/`
+  - `ManageCardModal.tsx`
+  - `useManageCardModalStyle.ts`
+- `views/components/ManageCardsSkeleton/`
+  - `ManageCardsSkeleton.tsx`
+  - `useManageCardsSkeletonStyle.ts`
+
+#### **Payments Feature (`src/features/payments/`)**
+- `hooks/keys/paymentsKeys.ts`
+- `hooks/queries/useGetOrderDetails.ts`
+- `hooks/mutation/useCreateIntent.ts`
+- `hooks/mutation/useCheckout.ts`
+- `views/screens/CheckoutScreen/`
+  - `CheckoutScreen.tsx`
+  - `useCheckoutScreenStyle.ts`
+  - `useCheckoutScreen.ts`
+- `views/screens/PaymentCompleteScreen/`
+  - `PaymentCompleteScreen.tsx`
+  - `usePaymentCompleteScreenStyle.ts`
+  - `usePaymentCompleteScreen.ts`
+- `views/screens/TransactionScreen/`
+  - `TransactionScreen.tsx`
+  - `useTransactionScreenStyle.ts`
+  - `useTransactionScreen.ts`
+- `views/components/SavedCardsSkeleton/`
+  - `SavedCardsSkeleton.tsx`
+  - `useSavedCardsSkeletonStyle.ts`
+- `views/modals/DownloadPDFModal/`
+  - `DownloadPDFModal.tsx`
+  - `useDownloadPDFModalStyle.ts`
+
+#### **Profile Feature (`src/features/profile/`)**
+- `hooks/keys/profileKeys.ts`
+- `hooks/queries/useGetProfileData.ts`
+- `hooks/queries/useGetThemeGlobal.ts`
+- `hooks/mutation/useEditProfile.ts`
+- `hooks/mutation/useVerifyEmail.ts`
+- `hooks/mutation/useVerifyEmailOTP.ts`
+- `hooks/mutation/useVerifyPhone.ts`
+- `hooks/mutation/useVerifyPhoneOTP.ts`
+- `views/screens/ProfileScreen/`
+  - `ProfileScreen.tsx`
+  - `useProfileScreenStyle.ts`
+  - `useProfileScreen.ts`
+- `views/screens/EditProfileScreen/`
+  - `EditProfileScreen.tsx`
+  - `useEditProfileScreenStyle.ts`
+  - `useEditProfileScreen.ts`
+- `views/screens/TermsAndConditionsScreen/`
+  - `TermsAndConditionsScreen.tsx`
+- `views/screens/PrivacyPolicyScreen/`
+  - `PrivacyPolicyScreen.tsx`
+- `views/components/ImagePickerAlert/`
+  - `ImagePickerAlert.tsx`
+  - `useImagePickerAlertStyle.ts`
+- `views/modals/VerifyCodeModal/`
+  - `VerifyCodeModal.tsx`
+  - `useVerifyCodeModalStyle.ts`
+- `utils/uploadToS3.ts`
+
+### 4. Move Common Components/Hooks to Shared
+- `src/components/*` -> `src/shared/components/`
+  - Move `LoaderComponent.tsx`, `SuccessModal.tsx`, `WarnAlert.tsx`, `WrapperContainer.tsx` and their style hooks.
+  - Move `CommonHeader.tsx` and `CurrencyText.tsx` and their style hooks.
+- `src/hooks/useColors.ts` -> `src/shared/theme/useColors.ts`
+- `src/routes/useNotificationHandler.ts` -> `src/shared/services/notifications/useNotificationHandler.ts` (or import directly from routes/shared services)
+
+---
+
+## Verification Plan
+
+### Automated Tests
+- Run `npm run lint` to ensure no syntax/formatting/linter issues across the codebase.
+- Run `npm test` if any tests are defined to verify logic.
+
+### Manual Verification
+- Compile and start the app using `npm start` / Metro server.
+- Verify screen navigation is completely intact and functional (Welcome/Login, AddCard, Tab navigation, profile edit, checkout).
