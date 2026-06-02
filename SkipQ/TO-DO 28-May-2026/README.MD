@@ -1,10 +1,10 @@
 # To Do:
 
-## 1. Dead Code
+## 1. Dead Code ✅
 
-Deleting of unused or dead code
+Deleting of unused or dead code.
 
-## 2. Barrel Files
+## 2. Barrel Files ✅
 
 Too many index.ts or index.tsx files with no need for them.
 
