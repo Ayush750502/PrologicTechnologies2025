@@ -24,7 +24,7 @@ Too many index.ts or index.tsx files with no need for them.
 
 ---
 
-## 3. Folder Structure
+## 3. Folder Structure ✅
 
 Maintaining files in a proper folder structure.
 
@@ -317,7 +317,7 @@ src/
 **6. atom/ -** for storing the common atom states used throught the application.
 
 
-### Features used in application
+### Features used in application ✅
 
 **1. Auth**
 
