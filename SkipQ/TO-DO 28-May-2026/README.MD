@@ -567,3 +567,290 @@ We will move files into their respective features under `src/features/`.
 ### Manual Verification
 - Compile and start the app using `npm start` / Metro server.
 - Verify screen navigation is completely intact and functional (Welcome/Login, AddCard, Tab navigation, profile edit, checkout).
+
+
+## Current folder strusture:
+
+```txt
+
+src
+├── api
+│   └── api.ts
+├── assets
+│   ├── fonts.ts
+│   ├── Images
+│   │   ├── 3dots.png
+│   │   ├── amexcard.png
+│   │   ├── applePay.png
+│   │   ├── appLogoSkipQ1.png
+│   │   ├── appLogoSkipQ.png
+│   │   ├── BackIcon.png
+│   │   ├── calender.png
+│   │   ├── CartSkipQ.png
+│   │   ├── checkIcon.png
+│   │   ├── CloseIcon.png
+│   │   ├── connectCart.png
+│   │   ├── crossIcon.png
+│   │   ├── debit.png
+│   │   ├── deleteIcon.png
+│   │   ├── deleteSkipQ.png
+│   │   ├── dhiram.svg
+│   │   ├── dinercard.png
+│   │   ├── discovercard.png
+│   │   ├── downloadIcon.png
+│   │   ├── DummyCartItem1.png
+│   │   ├── DummyCartItem2.png
+│   │   ├── DummyCartItem3.png
+│   │   ├── DummyPSkipQ.png
+│   │   ├── EditPenSkipQ.png
+│   │   ├── EditPSkipQ.png
+│   │   ├── error.png
+│   │   ├── flash-off.png
+│   │   ├── flash.png
+│   │   ├── gPay.png
+│   │   ├── HideEye.png
+│   │   ├── HistorySkipQ.png
+│   │   ├── logoutSkipQ.png
+│   │   ├── ManageCardsSkipQ.png
+│   │   ├── mastercard.png
+│   │   ├── nointernet.png
+│   │   ├── PrivacyPolicySkipQ.png
+│   │   ├── ProfilebgSkipQ.png
+│   │   ├── ProfileSkipQ.png
+│   │   ├── rightCircle.png
+│   │   ├── RightIconSkipQ.png
+│   │   ├── rupaycard.png
+│   │   ├── ShopIcon.png
+│   │   ├── showEye.png
+│   │   ├── SkipQAppLogo.png
+│   │   ├── skipqbg.png
+│   │   ├── successPayment.png
+│   │   ├── success.png
+│   │   ├── TermSkipQ.png
+│   │   ├── visa.png
+│   │   └── Warning.png
+│   └── images.ts
+├── config
+│   ├── NavigationString.ts
+│   └── NavigationTypes.ts
+├── declarations.d.ts
+├── features
+│   ├── app
+│   │   └── atom
+│   │       └── appAtom.ts
+│   ├── auth
+│   │   ├── atom
+│   │   │   └── authAtom.ts
+│   │   ├── endpoints
+│   │   │   └── auth.ts
+│   │   ├── hooks
+│   │   │   ├── keys
+│   │   │   │   └── authMutationKeys.ts
+│   │   │   └── mutation
+│   │   │       ├── useDeleteAccount.ts
+│   │   │       ├── useFcmToken.ts
+│   │   │       ├── useLogin.ts
+│   │   │       ├── useLogout.ts
+│   │   │       └── useVerifyCode.ts
+│   │   └── views
+│   │       └── screens
+│   │           ├── LoginScreen
+│   │           │   ├── LoginScreen.tsx
+│   │           │   ├── useLoginScreenStyle.ts
+│   │           │   └── useLoginScreen.ts
+│   │           └── VerifyCodeScreen
+│   │               ├── useVerifyCodeScreenStyle.ts
+│   │               ├── useVerifyCodeScreen.ts
+│   │               └── VerifyCodeScreen.tsx
+│   ├── cards
+│   │   ├── endpoints
+│   │   │   └── cards.ts
+│   │   ├── hooks
+│   │   │   ├── keys
+│   │   │   │   └── cardsKeys.ts
+│   │   │   ├── mutation
+│   │   │   │   ├── useAddCardDetails.ts
+│   │   │   │   ├── useDeleteCard.ts
+│   │   │   │   └── useSetCardAsPrimary.ts
+│   │   │   └── queries
+│   │   │       └── useGetCardDetails.ts
+│   │   └── views
+│   │       ├── components
+│   │       │   └── ManageCardsSkeleton
+│   │       │       ├── ManageCardsSkeleton.tsx
+│   │       │       └── useManageCardsSkeletonStyles.ts
+│   │       ├── modals
+│   │       │   ├── AddCardModal
+│   │       │   │   ├── AddCardModal.tsx
+│   │       │   │   └── useAddCardModalStyles.ts
+│   │       │   └── ManageCardModal
+│   │       │       ├── ManageCardModal.tsx
+│   │       │       └── useManageCardModalStyles.ts
+│   │       └── screens
+│   │           ├── AddCardScreen
+│   │           │   ├── AddCardScreen.tsx
+│   │           │   ├── components
+│   │           │   │   └── AddCardValidation.ts
+│   │           │   ├── useAddCardStyles.ts
+│   │           │   └── useAddCard.ts
+│   │           └── ManageCardsScreen
+│   │               ├── ManageCardsScreen.tsx
+│   │               ├── useManageCardsScreenStyle.ts
+│   │               └── useManageCardsScreen.ts
+│   ├── cart
+│   │   ├── atom
+│   │   │   └── cartAtom.ts
+│   │   ├── endpoints
+│   │   │   └── cart.ts
+│   │   ├── hooks
+│   │   │   ├── keys
+│   │   │   │   └── cartKeys.ts
+│   │   │   ├── mutation
+│   │   │   │   ├── useApplyPromo.ts
+│   │   │   │   ├── useDeleteProduct.ts
+│   │   │   │   └── useLinkDevice.ts
+│   │   │   └── queries
+│   │   │       ├── useGetAllProduct.ts
+│   │   │       └── useGetLastActiveCart.ts
+│   │   └── views
+│   │       └── screens
+│   │           ├── CartScreen
+│   │           │   ├── CartScreen.tsx
+│   │           │   ├── useCartScreenStyle.ts
+│   │           │   └── useCartScreen.ts
+│   │           └── ScanCartScreen
+│   │               ├── hooks
+│   │               │   ├── helpers.ts
+│   │               │   ├── types.ts
+│   │               │   └── useAppStateListener.ts
+│   │               ├── modals
+│   │               │   ├── CameraScanner.tsx
+│   │               │   └── useCameraScannerStyles.ts
+│   │               ├── ScanCartScreen.tsx
+│   │               ├── useScanCartStyles.ts
+│   │               └── useScanCart.ts
+│   ├── payments
+│   │   ├── endpoints
+│   │   │   └── payments.ts
+│   │   ├── hooks
+│   │   │   ├── keys
+│   │   │   │   └── paymentsKeys.ts
+│   │   │   ├── mutation
+│   │   │   │   ├── useCheckout.ts
+│   │   │   │   └── useCreateIntent.ts
+│   │   │   └── queries
+│   │   │       └── useGetOrderDetails.ts
+│   │   └── views
+│   │       ├── components
+│   │       │   └── SavedCardsSkeleton
+│   │       │       ├── SavedCardsSkeleton.tsx
+│   │       │       └── useSavedCardsSkeletonStyles.ts
+│   │       └── screens
+│   │           ├── CheckoutScreen
+│   │           │   ├── CheckoutScreen.tsx
+│   │           │   ├── useCheckoutScreenStyles.ts
+│   │           │   └── useCheckoutScreen.ts
+│   │           ├── PaymentCompleteScreen
+│   │           │   ├── PaymentCompleteScreen.tsx
+│   │           │   ├── usePaymentCompleteScreenStyles.ts
+│   │           │   └── usePaymentCompleteScreen.ts
+│   │           └── TransactionScreen
+│   │               ├── TransactionScreen.tsx
+│   │               ├── useTransactionScreenStyles.ts
+│   │               └── useTransactionScreen.ts
+│   └── profile
+│       ├── endpoints
+│       │   └── profile.ts
+│       ├── hooks
+│       │   ├── keys
+│       │   │   └── profileKeys.ts
+│       │   ├── mutation
+│       │   │   ├── useEditProfile.ts
+│       │   │   ├── useVerifyEmailOTP.ts
+│       │   │   ├── useVerifyEmail.ts
+│       │   │   ├── useVerifyPhoneOTP.ts
+│       │   │   └── useVerifyPhone.ts
+│       │   └── queries
+│       │       ├── useGetProfileData.ts
+│       │       └── useGetThemeGlobal.ts
+│       ├── utils
+│       │   └── uploadToS3.ts
+│       └── views
+│           ├── components
+│           │   └── ImagePickerAlert
+│           │       ├── ImagePickerAlert.tsx
+│           │       └── useImagePickerAlertStyles.ts
+│           ├── modals
+│           │   └── VerifyCodeModal
+│           │       ├── useVerifyCodeModalStyles.ts
+│           │       └── VerifyCodeModal.tsx
+│           └── screens
+│               ├── EditProfileScreen
+│               │   ├── components
+│               │   │   └── editProfileValidation.tsx
+│               │   ├── EditProfileScreen.tsx
+│               │   ├── useEditProfileScreenStyles.ts
+│               │   └── useEditProfileScreen.ts
+│               ├── PrivacyPolicyScreen
+│               │   └── PrivacyPolicyScreen.tsx
+│               ├── ProfileScreen
+│               │   ├── ProfileScreen.tsx
+│               │   ├── useProfileScreen.ts
+│               │   └── useProfileStyles.ts
+│               └── TermsAndConditionsScreen
+│                   └── TermsAndConditionsScreen.tsx
+├── locales.ts
+├── routes
+│   ├── BottomTabs.tsx
+│   ├── RootNavigation.tsx
+│   ├── useAuthCheck.ts
+│   ├── useBottomTabsStyles.ts
+│   ├── useBranding.ts
+│   ├── useNotificationHandler.ts
+│   └── useRootNavigatorStyles.ts
+├── shared
+│   ├── components
+│   │   ├── AppButton
+│   │   │   ├── AppButton.tsx
+│   │   │   └── useAppButtonStyles.ts
+│   │   ├── AppUpdateModal
+│   │   │   ├── AppUpdateModal.tsx
+│   │   │   └── useAppUpdateStyles.ts
+│   │   ├── CommonHeader
+│   │   │   ├── CommonHeader.tsx
+│   │   │   └── useCommonHeaderStyles.ts
+│   │   ├── CurrencyText
+│   │   │   ├── CurrencyText.tsx
+│   │   │   └── useCurrencyTextStyles.ts
+│   │   ├── LoaderComponent
+│   │   │   ├── LoaderComponent.tsx
+│   │   │   └── useLoaderStyles.ts
+│   │   ├── SuccessModal
+│   │   │   ├── SuccessModal.tsx
+│   │   │   └── useSuccessModalStyles.ts
+│   │   ├── WarnAlert
+│   │   │   ├── useWarnAlertStyles.ts
+│   │   │   └── WarnAlert.tsx
+│   │   └── WrapperContainer
+│   │       ├── useWrapperContainerStyles.ts
+│   │       └── WrapperContainer.tsx
+│   ├── services
+│   │   └── notifications
+│   │       └── useNotificationHandler.ts
+│   └── theme
+│       ├── colors.ts
+│       ├── index.ts
+│       └── useColors.ts
+└── utils
+    ├── aws.ts
+    ├── currencyFormatter.ts
+    ├── formatMobileNumber.ts
+    ├── helper
+    │   ├── refetchQuery.ts
+    │   ├── responsiveFonts.ts
+    │   └── util.ts
+    ├── helpers
+    │   └── navigations.ts
+    └── statuses.ts
+
+```
