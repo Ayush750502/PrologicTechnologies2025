@@ -8,3 +8,8 @@
 
 ## Storage - [(Fast) react-native-mmkv](https://www.npmjs.com/package/react-native-mmkv) | [@react-native-async-storage/async-storage](https://www.npmjs.com/package/@react-native-async-storage/async-storage)
 
+## Api handling - [@tanstack/react-query](https://tanstack.com/query/latest)
+
+## forms and validation - [formik](https://formik.org/) & [yup](https://www.npmjs.com/package/yup)
+
+## Global State - [redux](https://redux.js.org/) | [atom](https://jotai.org/)
