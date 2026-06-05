@@ -6,5 +6,5 @@
 
 ## Multiple threading - [react-native-worklets](https://docs.swmansion.com/react-native-worklets/)
 
-## Storage - [react-native-mmkv](https://www.npmjs.com/package/react-native-mmkv) | [@react-native-async-storage/async-storage](https://www.npmjs.com/package/@react-native-async-storage/async-storage)
+## Storage - [(Fast) react-native-mmkv](https://www.npmjs.com/package/react-native-mmkv) | [@react-native-async-storage/async-storage](https://www.npmjs.com/package/@react-native-async-storage/async-storage)
 
