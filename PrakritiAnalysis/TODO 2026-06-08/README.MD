@@ -39,7 +39,12 @@
 	6. Unused imports
 	7. Unused Functions
 
-### Barrel Files:
+### Duplicate Code removal:
+
+	1. Identical functions
+	2. Duplicate files
+
+### Barrel Files removal:
 
 	Renaming Barrel files into their relevant main function.
 
@@ -101,3 +106,10 @@
 				{{component_name}}/
 					{{component_name}}.tsx
 					use{{component_name}}.ts
+
+
+	**Features:**
+	1. app - root functions or those states which are used at the root level of the application.
+	2. auth - containing everything about auth feature like apis, states, hooks, UI etc.
+	3. dashboard - contains everything used in the dash boards
+	4. Assesstment Result
