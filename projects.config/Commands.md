@@ -20,7 +20,7 @@ for running emulated device while it's gpu is off and without boot animation.
 for resetting cache of the app.
 
 > adb-396374202667616254-oiypvx._adb-tls-connect._tcp --> Handshow Device
-saving hanshow device name in the
+saving hanshow device name in the.
 
 > adb shell pm list packages
 Showing the names of the installed packages in the connected device.

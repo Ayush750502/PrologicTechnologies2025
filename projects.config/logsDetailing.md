@@ -23,6 +23,8 @@ const logSymbolism = {
 
 } as const; 
 
+message?: any, ...optionalParams: any[]
+
 export default function consoleDebug(type : keyof typeof logSymbolism, logSymbolism, message1 : string, message2: string) {
 	if(__DEV__) console.log(logSymbolism.type, message1, message2);
 }
