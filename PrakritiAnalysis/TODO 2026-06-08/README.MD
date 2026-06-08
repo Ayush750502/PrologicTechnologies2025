@@ -108,11 +108,12 @@
 					use{{component_name}}.ts
 
 
-	**Features:**
+**Features:**
+
 	1. app - root functions or those states which are used at the root level of the application.
 	2. auth - containing everything about auth feature like apis, states, hooks, UI etc.
 	3. dashboard - contains everything used in the dash boards.
 		  i. Main Screen
 		 ii. Assessment Quiz Screen
 		iii. Assessment Result Screen
-	4. Privacy Policy and TNC - 
+	4. Privacy Policy and TNC -
