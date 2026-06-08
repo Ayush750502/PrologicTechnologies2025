@@ -21,6 +21,9 @@
 	d. Download report.
 	e. Dashboard.
 	f. Navigation
+6. Current Flow:
+
+	[Dashboard] --(Start Assessment)--> [Assessment Screen]
 
 ---
 
@@ -31,18 +34,22 @@
 	1. dead styling
 	2. dead logic (other than authentication one)
 	3. commented code
+	4. Unused Code Files
+	5. Unused states
+	6. Unused imports
+	7. Unused Functions
 
 ### Barrel Files:
 
 	Renaming Barrel files into their relevant main function.
 
-### UI Segregation:
-
-	Extracting Multiple UI components coded within one file along with their main component.
-
 ### Excessive File usages:
 
 	endpoint files, api/functions files etc.
+
+### UI Segregation:
+
+	Extracting Multiple UI components coded within one file along with their main component.
 
 ### Functional Hook:
 
