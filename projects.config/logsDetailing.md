@@ -10,23 +10,38 @@ Warning - 🟡 | ⚠️
 
 Info - 🔵 | ℹ️ | 📋
 
-Important - ‼️IMPORTANT‼️ | 🟣 | 🎯
+Important - ‼️ | 🟣 | 🎯
 
 Function for sending logs: 
 ```ts
 const logSymbolism = {
-
 	error: "🚨",
 	log: "📋",
 	warn: "⚠️",
-	important: "🎯"
-
+	important: "🎯",
+	send: "📤",
+	received: "📥"
 } as const; 
 
-message?: any, ...optionalParams: any[]
-
-export default function consoleDebug(type : keyof typeof logSymbolism, logSymbolism, message1 : string, message2: string) {
-	if(__DEV__) console.log(logSymbolism.type, message1, message2);
+type LogType = keyof typeof logSymbolism;
+/**
+ * Logs a message to the console with a symbol based on its type
+ * @param type 
+ * @param messages 
+ * @param optionalParams 
+ */
+export function consoleDebug(messages : LogType | any, ...optionalParams: any[]) {
+	if(__DEV__) {
+    if (typeof messages === 'string') {
+      const logType: LogType = messages.toLowerCase() as LogType;
+      if (logSymbolism[logType]) {
+        console.log(logSymbolism[logType], ...optionalParams);
+        return;
+      } else {
+        console.log(logSymbolism.log, messages, ...optionalParams);
+      }
+    }
+  }
 }
 ```
 
