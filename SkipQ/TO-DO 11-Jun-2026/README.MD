@@ -1,6 +1,6 @@
 # TO-DO 11-Jun-2026
 
-## [Hanshow Device APIs](./Hanshow_Device_Apis.md)
+**Objective -** Integrating new apis to the applications.
 
 > [!IMPORTANT]
 > **Before Updating Progress**
@@ -8,6 +8,8 @@
 > * Mark **☐** for APIs that are yet to be integrated.
 > * Mark **☑** once integration and testing are complete.
 > * Only one status should represent the current state of an API.
+
+## [Hanshow Device APIs](./Hanshow_Device_Apis.md)
 
 
 | Method | Endpoint                                   | In Progress | Done |
