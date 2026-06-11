@@ -48,7 +48,7 @@
 
 | Method | Endpoint                              | In Progress | Done |
 | ------ | ------------------------------------- | ----------- | ---- |
-| POST   | `/auth/shopper/login`                 | ☐           | ☐    |
+| POST   | `/auth/shopper/login`                 | ☑           | ☐    |
 | POST   | `/auth/shopper/verify-otp`            | ☐           | ☐    |
 | POST   | `/auth/shopper/log-out`               | ☐           | ☐    |
 | DELETE | `/shopper/:userId`                    | ☐           | ☐    |
@@ -58,7 +58,7 @@
 | POST   | `/card/set-primary`                   | ☐           | ☐    |
 | POST   | `/card/delete-card`                   | ☐           | ☐    |
 | POST   | `/auth/shopper/:userId/link-device`   | ☐           | ☐    |
-| GET    | `/cart/:cartId/getAllProducts`        | ☐           | ☐    |
+| GET    | `/cart/:cartId/getAllProducts`        | ☑           | ☐    |
 | GET    | `/cart/last-active-cart/:shopperId`   | ☐           | ☐    |
 | POST   | `/promos/applyPromo`                  | ☐           | ☐    |
 | DELETE | `/cart/:cartId/deleteProduct`         | ☐           | ☐    |
