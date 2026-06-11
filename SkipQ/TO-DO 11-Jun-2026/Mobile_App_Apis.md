@@ -1,4 +1,4 @@
-# Mobile Application
+# Mobile Application Apis
 
 **Base URL:** `https://skipqapi.prologic-technologies.com`
 
