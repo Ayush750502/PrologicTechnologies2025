@@ -1,8 +1,12 @@
 # Important
 
-## Currently going on:
+## In-Progress:
 
 [Skip Q Api Integration](./SkipQ/TO-DO_2026-06-11/README.MD)
+
+## On-Hold:
+
+[PrakritiAnalysis Refactoring](./PrakritiAnalysis/TODO_2026-06-08/README.MD)
 
 ---
 
