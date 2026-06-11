@@ -1,6 +1,14 @@
 # TO-DO 11-Jun-2026
 
-## Hanshow Device APIs
+## [Hanshow Device APIs](./Hanshow_Device_Apis.md)
+
+> [!IMPORTANT]
+> **Before Updating Progress**
+>
+> * Mark **☐** for APIs that are yet to be integrated.
+> * Mark **☑** once integration and testing are complete.
+> * Only one status should represent the current state of an API.
+
 
 | Method | Endpoint                                   | In Progress | Done |
 | ------ | ------------------------------------------ | ----------- | ---- |
@@ -34,7 +42,7 @@
 
 ---
 
-## Mobile Application APIs
+## [Mobile Application APIs](./Mobile_App_Apis.md)
 
 | Method | Endpoint                              | In Progress | Done |
 | ------ | ------------------------------------- | ----------- | ---- |
