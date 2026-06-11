@@ -4,7 +4,6 @@
 
 Api integration in device app.
 
-
 ---
 
 ## Hanshow device apis
