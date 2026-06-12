@@ -117,3 +117,4 @@
 		 ii. Assessment Quiz Screen
 		iii. Assessment Result Screen
 	4. Privacy Policy and TNC -
+	5. Language -
