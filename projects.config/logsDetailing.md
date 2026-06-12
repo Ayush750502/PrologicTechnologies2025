@@ -18,12 +18,15 @@ const logSymbolism = {
 	error: "🚨",
 	log: "📋",
 	warn: "⚠️",
-	important: "🎯",
+	important: "‼️",
 	send: "📤",
-	received: "📥"
+	received: "📥",
+  success: "✅",
+  info: "ℹ️"
 } as const; 
 
 type LogType = keyof typeof logSymbolism;
+
 /**
  * Logs a message to the console with a symbol based on its type
  * @param type 
