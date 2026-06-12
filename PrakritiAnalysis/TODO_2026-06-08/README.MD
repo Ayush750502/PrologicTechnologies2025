@@ -29,7 +29,7 @@
 
 ## Refactoring of code into a definate / understandable structure.
 
-### Dead Code removal:
+### Dead Code removal: ✓
 
 	1. dead styling
 	2. dead logic (other than authentication one)
@@ -39,16 +39,16 @@
 	6. Unused imports
 	7. Unused Functions
 
-### Duplicate Code removal:
+### Duplicate Code removal: ✓
 
 	1. Identical functions
 	2. Duplicate files
 
-### Barrel Files removal:
+### Barrel Files removal: ✓
 
 	Renaming Barrel files into their relevant main function.
 
-### Excessive File usages:
+### Excessive File usages: ✓
 
 	endpoint files, api/functions files etc.
 
@@ -108,13 +108,24 @@
 					use{{component_name}}.ts
 
 
-**Features:**
+**Features:** 
 
-	1. app - root functions or those states which are used at the root level of the application.
+	1. app - root functions or those states which are used at the root level of the application with Privacy Policy and TNC
+		app/ 
+		  AppUpdate/
+		  PrivacyPolicy/
+		  TermsNConditions/
+
 	2. auth - containing everything about auth feature like apis, states, hooks, UI etc.
+		auth/
+		  AboutYourself/
 	3. dashboard - contains everything used in the dash boards.
-		  i. Main Screen
-		 ii. Assessment Quiz Screen
-		iii. Assessment Result Screen
-	4. Privacy Policy and TNC -
+		 dashboard/
+		 	DashboardScreen/
+    4. Assessment - 
+    	  assessment/
+    	  	QuizScreen/
+    	  	ResultScreen/
 	5. Language -
+		  language/
+		  	SelectLanguageScreen/

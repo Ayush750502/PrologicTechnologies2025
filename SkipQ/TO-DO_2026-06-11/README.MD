@@ -14,20 +14,20 @@
 
 | Method | Endpoint                                   | In Progress | Done |
 | ------ | ------------------------------------------ | ----------- | ---- |
-| POST   | `/auth/shopper/login`                      | ☑           | ☐    |
-| POST   | `/auth/shopper/device-verify-otp`          | ☑           | ☐    |
-| POST   | `/auth/shopper/device-log-out`             | ☑           | ☐    |
+| POST   | `/auth/shopper/login`                      | ☑           | ☑    |
+| POST   | `/auth/shopper/device-verify-otp`          | ☑           | ☑    |
+| POST   | `/auth/shopper/device-log-out`             | ☑           | ☑    |
 | POST   | `/device/getDeviceDetails`                 | ☑           | ☐    |
 | POST   | `/device/register-device`                  | ☑           | ☐    |
 | PUT    | `/device/health`                           | ☐           | ☐    |
 | POST   | `/device-installation/{deviceId}/complete` | ☑           | ☐    |
-| POST   | `/device/addDeviceAlerts`                  | ☐           | ☐    |
-| GET    | `/cart/{cartId}/getAllProducts`            | ☑           | ☐    |
+| POST   | `/device/addDeviceAlerts`                  | ☑           | ☐    |
+| GET    | `/cart/{cartId}/getAllProducts`            | ☑           | ☑    |
 | POST   | `/products/barcode`                        | ☑           | ☐    |
 | PUT    | `/cart/{cartId}/adjustQuantity`            | ☑           | ☐    |
-| POST   | `/cart/{cartId}/addProduct`                | ☐           | ☐    |
-| PUT    | `/cart/{cartId}/uploadProductVideo`        | ☐           | ☐    |
-| POST   | `/auth/staff/login`                        | ☑           | ☐    |
+| POST   | `/cart/{cartId}/addProduct`                | ☑           | ☐    |
+| PUT    | `/cart/{cartId}/uploadProductVideo`        | ☑           | ☑    |
+| POST   | `/auth/staff/login`                        | ☑           | ☑    |
 | POST   | `/auth/staff/logout`                       | ☑           | ☐    |
 | GET    | `/hil/hil-list/{store}`                    | ☐           | ☐    |
 | POST   | `/store/staff/escalate`                    | ☐           | ☐    |
