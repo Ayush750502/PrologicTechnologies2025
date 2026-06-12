@@ -52,7 +52,7 @@
 
 	endpoint files, api/functions files etc.
 
-### UI Segregation:
+### UI Segregation: ✓
 
 	Extracting Multiple UI components coded within one file along with their main component.
 
@@ -125,6 +125,11 @@
     4. Assessment - 
     	  assessment/
     	  	QuizScreen/
+    	  		AboutYourself/
+    	  		GutHealth/
+    	  		BowelMovement/
+    	  		PhysicalStrength/
+    	  		MentalStrength/
     	  	DownloadResultScreen/
     	  	ResultModal/
 	5. Language -
