@@ -112,20 +112,21 @@
 
 	1. app - root functions or those states which are used at the root level of the application with Privacy Policy and TNC
 		app/ 
-		  AppUpdate/
-		  PrivacyPolicy/
-		  TermsNConditions/
+		  AppUpdateModal/
+		  PrivacyPolicyScreen/
+		  TermsNConditionsScreen/
 
 	2. auth - containing everything about auth feature like apis, states, hooks, UI etc.
 		auth/
-		  AboutYourself/
+		  AboutYourselfFormScreen/
 	3. dashboard - contains everything used in the dash boards.
 		 dashboard/
 		 	DashboardScreen/
     4. Assessment - 
     	  assessment/
     	  	QuizScreen/
-    	  	ResultScreen/
+    	  	DownloadResultScreen/
+    	  	ResultModal/
 	5. Language -
 		  language/
 		  	SelectLanguageScreen/
