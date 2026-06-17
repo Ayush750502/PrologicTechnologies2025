@@ -138,18 +138,14 @@
 
 ## Current Folder structure
 
+> [!Note]
+> 54 directories, 142 files
+
 ```cmd
-src/
+src
 .
 ├── api
-│   ├── api.ts
-│   ├── endpoints
-│   │   ├── app.ts
-│   │   ├── assessments.ts
-│   │   ├── auth.ts
-│   │   └── profile.ts
-│   ├── MutationKeys.ts
-│   └── QueryKeys.ts
+│   └── api.ts
 ├── assets
 │   ├── fonts.js
 │   ├── Images
@@ -211,18 +207,6 @@ src/
 │   │   ├── Warning.png
 │   │   └── WellnessResultIcon.png
 │   └── images.js
-├── components
-│   ├── ChangePassHeader.tsx
-│   ├── DrawerHeader.tsx
-│   ├── HeaderComponent.tsx
-│   ├── LoaderComponent.tsx
-│   ├── MediaPickerModal.tsx
-│   ├── PermissionRequest.ts
-│   ├── SuccessModal.tsx
-│   ├── WarnAlert.tsx
-│   ├── WebViewScreen.tsx
-│   └── WrapperContainer.tsx
-├── config
 ├── features
 │   ├── app
 │   │   ├── AppUpdateModal
@@ -315,27 +299,6 @@ src/
 ├── graphql
 │   ├── mutations
 │   └── useApolloClient.js
-├── hooks
-│   ├── mutations
-│   │   ├── AddUpdateReview.ts
-│   │   ├── ChangePassword.ts
-│   │   ├── DeleteAccount.ts
-│   │   ├── ForgotPassword.ts
-│   │   ├── GetResult.ts
-│   │   ├── Login.ts
-│   │   ├── RegisterUser.ts
-│   │   ├── SendEmailReport.ts
-│   │   └── UpdateDeviceToken.ts
-│   ├── queries
-│   │   ├── CommonData.ts
-│   │   ├── downloadReport.ts
-│   │   ├── GetQuestions.ts
-│   │   ├── GetResultHistory.ts
-│   │   ├── GetReview.ts
-│   │   └── GetUserProfile.ts
-│   ├── useAlert.ts
-│   ├── useBackHandler.ts
-│   └── useLoadMore.ts
 ├── locales
 │   ├── en.json
 │   └── hi.json
