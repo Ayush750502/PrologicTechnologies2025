@@ -35,8 +35,8 @@
 | POST   | `/store/staff/manage-quantity`             | ☑           | ☑    |
 | GET    | `/cart/cart-event-group`                   | ☑           | ☑    |
 | GET    | `/card/get-cards-detail/{userId}`          | ☐           | ☐    |
-| POST   | `/card/create-intent`                      | ☑           | ☐    |
-| POST   | `/cart/{cartId}/soldProducts`              | ☑           | ☐    |
+| POST   | `/card/create-intent`                      | ☑           | ☑    |
+| POST   | `/cart/{cartId}/soldProducts`              | ☑           | ☑    |
 | POST   | `/promo/validate`                          | ☐           | ☐    |
 | POST   | `/promos/applyPromo`                       | ☐           | ☐    |
 
