@@ -9,3 +9,18 @@
 4. **SkipQ/HanshowDevice/device [2026-06-24] -** Their is no procedure set for network errors.
 
 5. **SkipQ/HanshowDevice/cart [2026-06-24] -** No loader activity their for some api's activities(like QuanityAdjustModal, StaffLogin, BarcodeScan etc.).
+
+6. **SkipQ/Both/auth [2026-06-25] -** Mobile auth is not taking country code and phone number separatly i.e {{country code + phone number}} whille it should take them separatly.
+	Eg. : phone number - 123456785
+		  country code - 971
+		  final phone number - 971123456785
+
+  	while it should go like: 
+  	{
+  		"phoneNumber": "123456785",
+  		"countryCode": "971"
+  	}
+
+7. **SkipQ/MobileApp/profile [2026-06-25] -** Same as that in Issue 6. but for profile configration of the user.
+
+8. **SkipQ/Both/Merchant&Device [2026-06-25] -** Currency is not properly handled for both the merchant and the device.
