@@ -16,3 +16,9 @@
 2. [SkipQ](./SkipQ)
 3. [Munimigiri](./Munimigiri)
 4. [PrakritiAnalysis](./PrakritiAnalysis)
+
+## Rules:
+
+1. ⏳ | ▶️ **In-Progess**
+2. ✅ | ✔ **Completed**
+3. ⏸️ | 📞 **On-Hold**
