@@ -27,3 +27,5 @@
 4. **HanshowDevice/login/scan -** Currently Handle by web socket, must be handled by notification from now on.
 	
 	Updating scan QR login event from web-socket to push notification.
+
+

@@ -10,4 +10,4 @@
 
 4. **android version: 1.08(8)** ✅ - uploaded for publishing
 
-5. **ios version: 1.02(8)** 
+5. **ios version: 1.02(8)** ✅
