@@ -29,3 +29,8 @@
 	Updating scan QR login event from web-socket to push notification.
 
 
+
+5. **HanshowDevice/app/update_over_the_air -** Get to know how OTA will work for react native application.
+
+	CodePush - https://console.appzung.com/
+	@recodepush/react-native-code-push
