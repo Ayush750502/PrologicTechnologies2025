@@ -25,5 +25,5 @@
 
 8. **SkipQ/Both/Merchant&Device [2026-06-25] -** Currency is not properly handled for both the merchant and the device.
 
-9. **SkipQ/Both/ScanLogin [2026-07-10] -** QR code is same for that cart and the store, which can lead to mischevous activity,
+9. **SkipQ/Both/ScanLogin [2026-07-10] -** QR code is same for that cart and the store, which can lead to mischievous activity,
 	`like - person can save the qr code's photo, and scan it with the relevant app keeping it occupied leaving that cart unavailable for the customer in the store.`
