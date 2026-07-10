@@ -24,3 +24,6 @@
 7. **SkipQ/MobileApp/profile [2026-06-25] -** Same as that in Issue 6. but for profile configration of the user.
 
 8. **SkipQ/Both/Merchant&Device [2026-06-25] -** Currency is not properly handled for both the merchant and the device.
+
+9. **SkipQ/Both/ScanLogin [2026-07-10] -** QR code is same for that cart and the store, which can lead to mischevous activity,
+	`like - person can save the qr code's photo, and scan it with the relevant app keeping it occupied leaving that cart unavailable for the customer in the store.`
