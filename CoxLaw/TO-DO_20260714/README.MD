@@ -16,4 +16,3 @@ const accessKeyId = '********************';
 const secretAccessKey = '**********************************';
 const region = 'us-east-1';
 ````
-
