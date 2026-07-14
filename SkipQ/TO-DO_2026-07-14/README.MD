@@ -14,4 +14,5 @@ Api update and showing events like did nothing in the events modal
 
 ## 4. Staff Dashboard -
 
-<!-- Will be updated soon !-->
+> [!NOTE]
+> Will be updated soon
