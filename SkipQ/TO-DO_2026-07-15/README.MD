@@ -9,12 +9,12 @@
 
 ### Mobile:
 
-Working with Phone Number and Otp
+1. PHONE NUMBER & OTP  -  ✅
 
 ### Hanshow Device:
 
-1. Working with Phone Number and Otp
-2. Working with Link Device via QR Code
+1. PHONE NUMBER & OTP  -  ✅
+2. SCAN QR             -  ✅
 
 
 ## Cart:
@@ -28,47 +28,47 @@ Product updates are Working fine,
 
 ### Hanshow Device:
 
-BARCODE SCAN FLOW              -  ❌
-ADD WITHOUT SCAN FLOW          -  ✅
-ITEM REMOVED FLOW(Scan Check)  -  ✅
-ITEM REMOVED FLOW(List Check)  -  ✅
-OBSTRUCTION FLOW               -  ✅
-ADJUST QUANTITY                -  ✅
-HIL APPROVE                    -  
-HIL REJECT                     -  
+1. BARCODE SCAN FLOW              -  ❌
+2. ADD WITHOUT SCAN FLOW          -  ✅
+3. ITEM REMOVED FLOW(Scan Check)  -  ✅
+4. ITEM REMOVED FLOW(List Check)  -  ✅
+5. OBSTRUCTION FLOW               -  ✅
+6. ADJUST QUANTITY                -  ✅
+7. HIL APPROVE                    -  
+8. HIL REJECT                     -  
 
 
 ## Staff:
 
 ### Hanshow Device:
 
-ITEM APPROVE     -  ✅
-QR LOGIN         -  ✅
-ITEM DELETING    -  ✅
-CONTINIUE        -  ✅
-ABANDON          -  ✅
-CART-ITEM-EVENTS -  ✅
+1. ITEM APPROVE     -  ✅
+2. QR LOGIN         -  ✅
+3. ITEM DELETING    -  ✅
+4. CONTINIUE        -  ✅
+5. ABANDON          -  ✅
+6. CART-ITEM-EVENTS -  ✅
 
 
 ## Card:
 
 ### Mobile App:
 
-GET CARDS       -  ✅
-ADD CARD        -  ✅
-SET AS PRIMARY  -  ✅
+1. GET CARDS       -  ✅
+2. ADD CARD        -  ✅
+3. SET AS PRIMARY  -  ✅
 
 
 ## Payment:
 
 ### Mobile App:
 
-SAVED CARD        -  ✅
-CARD ENTRY        -  ✅ // But currency is not handled properly
-GET TRANSACTIONS  -  ✅
-DONWLOAD INVOICE  -  ✅
+1. SAVED CARD        -  ✅
+2. CARD ENTRY        -  ✅ // But currency is not handled properly
+3. GET TRANSACTIONS  -  ✅
+4. DOWNLOAD INVOICE  -  ✅
 
 ### Hanshow Device:
 
-SAVED CARD  -  ✅
-CARD ENTRY  -  ✅ // But currency is not handled properly
+1. SAVED CARD  -  ✅
+2. CARD ENTRY  -  ✅ // But currency is not handled properly
