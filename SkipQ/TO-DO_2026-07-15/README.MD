@@ -28,14 +28,14 @@ Product updates are Working fine,
 
 ### Hanshow Device:
 
-1. BARCODE SCAN FLOW              -  ❌
+1. BARCODE SCAN FLOW              -  ✅
 2. ADD WITHOUT SCAN FLOW          -  ✅
 3. ITEM REMOVED FLOW(Scan Check)  -  ✅
 4. ITEM REMOVED FLOW(List Check)  -  ✅
 5. OBSTRUCTION FLOW               -  ✅
 6. ADJUST QUANTITY                -  ✅
-7. HIL APPROVE                    -  
-8. HIL REJECT                     -  
+7. HIL APPROVE                    -  ✅
+8. HIL REJECT                     -  ✅
 
 
 ## Staff:
