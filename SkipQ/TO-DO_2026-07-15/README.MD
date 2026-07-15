@@ -1,5 +1,8 @@
 # SkipQ Testing Over Live URL
 
+> [!IMPORTANT]
+> ❌ Mobile App Refresh Token handling went wrong.
+
 > [!NOTE]
 > 
 >❌ - Issue
