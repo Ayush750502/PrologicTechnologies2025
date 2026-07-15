@@ -35,4 +35,9 @@
 	when user logs in the cart via mobile number and that time the application is in active states, their is no mechanism for mobile app to know that the user have logged in the cart for this scenario.
 	```
 
-12. **SkipQ/Both/Payment [2026-07-15] -** Items currency is not mapped with merchant accordingly.
+12. **SkipQ/Both/Payment [2026-07-15] -** Items currency is not mapped with merchant accordingly and also not set properly in the Backend
+
+	In Frontend - 
+	some places - diram, some places - dollar
+	In backend - dollar
+	while payment - it is consider items with their value in rupees and converting it into dollar
