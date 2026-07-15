@@ -1,5 +1,10 @@
 # SkipQ Testing Over Live URL
 
+> [!NOTE]
+> 
+>❌ - Issue
+>✅ - Working
+
 ## Auth:
 
 ### Mobile:
@@ -23,7 +28,7 @@ Product updates are Working fine,
 
 ### Hanshow Device:
 
-BARCODE SCAN FLOW              -  ✅
+BARCODE SCAN FLOW              -  ❌
 ADD WITHOUT SCAN FLOW          -  ✅
 ITEM REMOVED FLOW(Scan Check)  -  ✅
 ITEM REMOVED FLOW(List Check)  -  ✅
@@ -42,10 +47,12 @@ QR LOGIN         -  ✅
 ITEM DELETING    -  ✅
 CONTINIUE        -  ✅
 ABANDON          -  ✅
-CART-ITEM-EVENTS -  ❌
+CART-ITEM-EVENTS -  ✅
 
 
 ## Card:
+
+### Mobile App:
 
 GET CARDS       -  ✅
 ADD CARD        -  ✅
@@ -57,11 +64,11 @@ SET AS PRIMARY  -  ✅
 ### Mobile App:
 
 SAVED CARD        -  ✅
-CARD ENTRY        -  ❌
+CARD ENTRY        -  ✅ // But currency is not handled properly
 GET TRANSACTIONS  -  ✅
 DONWLOAD INVOICE  -  ✅
 
 ### Hanshow Device:
 
 SAVED CARD  -  ✅
-CARD ENTRY  -  ❌
+CARD ENTRY  -  ✅ // But currency is not handled properly
