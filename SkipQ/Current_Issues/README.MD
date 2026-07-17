@@ -28,6 +28,8 @@
 9. **SkipQ/Both/ScanLogin [2026-07-10] -** QR code is same for that cart and the store, which can lead to mischievous activity,
 	`like - person can save the qr code's photo, and scan it with the relevant app keeping it occupied leaving that cart unavailable for the customer in the store.`
 
+	It's a corner case [By Ajay Sir]
+
 10. **SkipQ/MobileApp/ProfileImage [2026-07-13] -** Their is not code / logic implemented for for updating the profile image of the user, other than uploading of the image in the s3.
 
 11. **SkipQ/MobileApp/CartLogin [2026-07-13] -** Cart login is not totaly in sync in the with mobile app for the user with same mobile number.
