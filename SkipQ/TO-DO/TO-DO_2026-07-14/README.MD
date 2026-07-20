@@ -1,6 +1,10 @@
 # New Updates
 
-## 1. CartItems Filter Update -
+> [!NOTE]
+> 
+> ✅ - DONE
+
+## 1. CartItems Filter Update - ✅
 
 a. adding quantity : 0 parameter to be filtered,
 b. For Loose items we are going to show weight instead of adjust quantity buttons in both Order List and Item Scanned and Order list in staff UI and also in adjust quantity of removed a product,
