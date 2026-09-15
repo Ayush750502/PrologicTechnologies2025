@@ -4,6 +4,16 @@
 
 This document captures the client feedback and requirements identified during the **Milestone 1 review**. The feedback is organized by functional area, along with the current status and any dependencies or open questions.
 
+>[!IMPORTANT]
+>
+> | Status               |  Items |
+> | -------------------- | -----: |
+> | `To Do`              |     10 |
+> | `Waiting for Client` |      4 |
+> | **Total**            | **14** |
+
+---
+
 ---
 
 # 1. UI
@@ -14,17 +24,20 @@ This document captures the client feedback and requirements identified during th
 
 | Change    | From                                     | To                                        |
 |-----------|------------------------------------------|-------------------------------------------|
-|     :-    | <img src="./appIcon.png" height=250 />   | <img src="./newAppIcon.png" height=250 /> |
+|           | <img src="./appIcon.png" height=250 />   | <img src="./newAppIcon.png" height=250 /> |
+
 ---
 
 ## 1.2 Application Color Theme `To Do`
 
 * Confirm whether both applications should use the **same color theme** or different themes.
 
-| Titles    | 1                                        | 2                                        |
+|           | Screen 1                                 | Screen 2                                 |
 |-----------|------------------------------------------|------------------------------------------|
 | **Phone** | Redmi Note 8                             | Redmi 9A                                 |
 | **Image** | <img src="./redmi-v11.png" height=700 /> | <img src="./redmi-v10.png" height=700 /> |
+
+>[!Note] Althought the color code is same for both the application, them might get affected by the different screens, as in screen 1 background color seem a bit lighter than that in screen 2
 
 ---
 
@@ -32,21 +45,15 @@ This document captures the client feedback and requirements identified during th
 
 Provide client-specific mobile screen theme variants:
 
-1. **Light Variant**
+1. Lighter grey background with dark cards
 
-   * Lighter grey background
-   * Dark cards
-
-2. **Dark Variant**
-
-   * Dark background
-   * Lighter cards
+2. Also implement and inverted theme with a dark background and lighter cards.
 
 ---
 
 ## 1.4 SHRED Mobile App Screen Design References `Waiting for Client`
 
-Use the **SHRED screen references provided by the client** as the design baseline for the following sections:
+Use the **[SHRED](https://play.google.com/store/apps/details?id=app.shred.android&pcampaignid=web_share) screen references provided by the client** as the design baseline for the following sections:
 
 * Nutrition
 * Training
@@ -63,7 +70,6 @@ Use the **SHRED screen references provided by the client** as the design baselin
 
 ## 2.1 Meal Master Data Configuration `Waiting for Client`
 
-* Client will provide the **master data for Meals**.
 * Admin should be able to configure meal information, including:
 
   * Meal name
@@ -78,8 +84,6 @@ Use the **SHRED screen references provided by the client** as the design baselin
 ---
 
 ## 2.2 Diet Plan and Calorie Adjustment `Waiting for Client`
-
-Client will provide the **diet plan catalog**.
 
 Users should be able to modify the quantity of assigned meal items. The system should automatically:
 
@@ -125,51 +129,7 @@ Users should be able to:
 
 ---
 
-# 3. Web / Staff Management
-
-## 3.1 Staff Schedule and Availability `To Do`
-
-Provide a staff roster/schedule view that allows users to identify:
-
-* Staff schedule
-* Staff availability
-* Whether a staff member is on leave
-
----
-
-# 4. Web / Responsive Design
-
-## 4.1 Mobile-Responsive Web Application `To Do`
-
-The web application must be **mobile responsive**.
-
-### Client Preference
-
-* Client prefers a mobile-friendly web experience.
-
----
-
-# 5. Web / Lead Management
-
-## 5.1 Lead Ownership and Role-Based Management `To Do`
-
-Leads should be managed according to the following roles:
-
-| Lead Stage  | Responsible Role |
-| ----------- | ---------------- |
-| All stages  | Front Desk       |
-| Trial stage | Front Desk       |
-| Trial stage | Floor Manager    |
-| Trial stage | Trainer          |
-
-### Expected Behavior
-
-* Front Desk should manage leads throughout all stages.
-* During the trial stage, the **Floor Manager** and **Trainer** should also have lead management access.
-
----
-
-# 6. Web / Membership
+# 6. Membership
 
 ## 6.1 Membership Upgrade Discount `To Do`
 
@@ -212,9 +172,9 @@ Trainers should be able to modify a client's workout:
 1. **Overall workout**
 2. **Specific day's workout**
 
-   * Example: Goal Less Workout
+   * Example: Goal Less Workout - When client don't want to follow hit usual workout plan, but has to do some excersise so is given some light excersises for that day.
 
-### Change Tracking
+### Tracking Changes
 
 Workout changes should be trackable, including:
 
@@ -226,6 +186,7 @@ Workout changes should be trackable, including:
 ### Workout History
 
 Trainers should be able to view **past workouts assigned to a client**.
+i.e maintaining a daily client's activity log.
 
 Past workout details should include:
 
@@ -238,23 +199,13 @@ Past workout details should include:
 
 ---
 
-# 8. Status Summary
-
-| Status               |  Items |
-| -------------------- | -----: |
-| `To Do`              |     10 |
-| `Waiting for Client` |      4 |
-| **Total**            | **14** |
-
----
-
-# 9. Client Dependencies
+# 8. Client Dependencies
 
 The following items are currently dependent on information or assets from the client:
 
 ### UI
 
-* SHRED mobile app screen references
+* [SHRED](https://play.google.com/store/apps/details?id=app.shred.android&pcampaignid=web_share) mobile app screen references
 
 ### Diet
 
@@ -269,47 +220,3 @@ The following items are currently dependent on information or assets from the cl
 * Clarification on student verification
 
 ---
-
-# 10. Open Questions
-
-The following points require clarification before implementation can be finalized:
-
-1. Should both applications use the same color theme?
-2. How should student authenticity be verified?
-3. How should the system prevent students from using another student's credentials?
-4. What exact discount should be applied when upgrading an existing membership?
-5. What are the exact rules for calorie recalculation when meal quantities are modified?
-6. What notification events should be triggered when trainers are reassigned or workouts are modified?
-
----
-
-# 11. Implementation Priority
-
-Based on the current status:
-
-### Priority 1 — Client Inputs Required
-
-* SHRED design references
-* Meal master data
-* Diet plan catalog
-* Alternate meal options
-* Student membership references and login details
-* Student verification rules
-
-### Priority 2 — Development Tasks
-
-* Application theme confirmation and implementation
-* Weekly calorie averages
-* Staff schedule and availability
-* Responsive web application
-* Lead ownership and role-based management
-* Membership upgrade discounts
-* Workout modification and history tracking
-
-### Priority 3 — Clarifications
-
-* Application color theme
-* Student verification mechanism
-* Student credential misuse prevention
-* Membership discount rules
-* Workout change notification rules
