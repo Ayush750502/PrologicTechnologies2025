@@ -1,16 +1,30 @@
 # Dietitian flow
 
-Mostly
+Here mostly we are focusing on how we are going to implement Dietitian flow in the current application, that is the changes we are going to make in the current flow.
 
 ## App
 
 ### Adding Navigation for Dietitian Flow
 
+## Auth
+
+### Choose Role
+
+* Dietitian Role will be added.
+
 ---
 
 ## Patient
 
-### Adding Dietitian Appointment Booking Flow
+### Profile
+
+* Adding a button for switching between the Dietitian mode and Doctor Mode for treatment.
+
+### Book Appointment
+
+1. **Select Treatment Area:** Here we will show Nutritional Goal List.
+2. **Select Doctor:** Here will show list of dietitian in same manner.
+3. **Select Slot:** Here we are going to show the available slots of the dietitian.
 
 ---
 
