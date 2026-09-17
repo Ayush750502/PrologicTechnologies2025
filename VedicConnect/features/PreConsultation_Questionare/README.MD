@@ -40,6 +40,10 @@
 | Other Occupation       | Text Input     | Specify occupation                                                                | Yes*     | Occupation = Other |
 | City / State / Country | Location Input | City / State / Country                                                            | Yes      | —                  |
 
+| Screen                        | With Validation                               |
+| ----------------------------- | --------------------------------------------- |
+| ![Screen](./BasicDetails.png) | ![Validations](./BasicDetailsValidations.png) |
+
 ---
 
 ## 2. Medical History
@@ -59,10 +63,6 @@
 | Other Symptom    | Text Input | Specify symptom                                                                                                         | Yes*     | Current Symptoms = Other |
 | Symptom Duration | Dropdown   | <1 week / 1–4 weeks / 1–6 months / >6 months                                                                            | Yes*     | Current Symptoms ≠ None  |
 
-
-| Screen                                        | With Validation                               |
-| --------------------------------------------- | --------------------------------------------- |
-| ![Screen](./BasicDetails.png) | ![Validations](./BasicDetailsValidations.png) |
 
 ### Medication & Supplements
 
