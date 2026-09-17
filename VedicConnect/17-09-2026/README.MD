@@ -6,7 +6,7 @@
 
 Adding Dietitian button for role signup.
 
-## [PreConsultation Questionare](./PreConsultQuestionary.MD)
+## [PreConsultation Questionare](../features/PreConsultation_Questionare/PreConsultQuestionary.MD)
 
 ### 1. Basic Details
 
