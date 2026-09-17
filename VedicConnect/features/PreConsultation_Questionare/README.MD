@@ -60,9 +60,9 @@
 | Symptom Duration | Dropdown   | <1 week / 1–4 weeks / 1–6 months / >6 months                                                                            | Yes*     | Current Symptoms ≠ None  |
 
 
-| Screen                      | With Validation                             |
-| --------------------------- | ------------------------------------------- |
-| ![Screen](BasicDetails.png) | ![Validations](BasicDetailsValidations.png) |
+| Screen                                        | With Validation                               |
+| --------------------------------------------- | --------------------------------------------- |
+| ![Screen](./BasicDetails.png) | ![Validations](./BasicDetailsValidations.png) |
 
 ### Medication & Supplements
 
