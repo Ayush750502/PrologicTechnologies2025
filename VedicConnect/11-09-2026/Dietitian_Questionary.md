@@ -37,7 +37,7 @@ Basic Details → Medical History → Goals → Food Habits → Allergies / Into
 | ---------------------- | -------------- | --------------------------------------------------------------------------------- | -------- | ------------------ |
 | Occupation             | Dropdown       | Office Work / On-Field Work / Student / Homemaker / Retired / Manual Work / Other | Yes      | —                  |
 | Other Occupation       | Text Input     | Specify occupation                                                                | Yes*     | Occupation = Other |
-| City / State / Country | Location Input | City / State / Country                                                            | Yes      | —                  |
+| City / State  | Location Input | City / State                                                            | Yes      | —                  |
 
 ---
 
@@ -75,21 +75,21 @@ Basic Details → Medical History → Goals → Food Habits → Allergies / Into
 
 ---
 
-# 3. Goals
+# ~~3. Goals~~
 
-## Primary Goal
+## ~~Primary Goal~~
 
-* **Goal (dropdown)** — Weight Loss / Weight Gain / Maintain Weight / Muscle Gain / General Health / Energy / Digestion / Diabetes / Cholesterol / BP / PCOS-PCOD / Sports Nutrition / Pregnancy Nutrition / Child Nutrition / Other — Required
+* ~~**Goal (dropdown)** — Weight Loss / Weight Gain / Maintain Weight / Muscle Gain / General Health / Energy / Digestion / Diabetes / Cholesterol / BP / PCOS-PCOD / Sports Nutrition / Pregnancy Nutrition / Child Nutrition / Other — Required~~
 
-## Target
+## ~~Target~~
 
-* **Target Weight** — kg — Conditional
-* **Preferred Timeline** — 1 month / 3 months / 6 months / No specific timeline — Conditional
+* ~~**Target Weight** — kg — Conditional~~
+* ~~**Preferred Timeline** — 1 month / 3 months / 6 months / No specific timeline — Conditional~~
 
-## Motivation
+## ~~Motivation~~
 
-* **Main reason** — Health / Appearance / Fitness / Energy / Medical condition / Doctor recommendation / Event / Other — Required
-* **Motivation** — 1 to 5 — Required
+* ~~**Main reason** — Health / Appearance / Fitness / Energy / Medical condition / Doctor recommendation / Event / Other — Required~~
+* ~~**Motivation** — 1 to 5 — Required~~
 
 ---
 
