@@ -29,15 +29,21 @@ Basic Details → Medical History → Goals → Food Habits → Allergies / Into
 | Waist Measurement    | Number Input         | inches                                         | No       | —                                            |
 | Recent Weight Change | Radio / Bottom Sheet | No change / Increased / Decreased              | Yes      | —                                            |
 | Amount of Change     | Number Input         | kg                                             | Yes*     | Recent Weight Change = Increased / Decreased |
-| Time Period          | Dropdown             | <1 month / 1–3 months / 3–6 months / >6 months | Yes*     | Recent Weight Change = Increased / Decreased |
+| **Time Period**          | Dropdown             | <1 month / 1–3 months / 3–6 months / >6 months | Yes*     | Recent Weight Change = Increased / Decreased |
+
+> [!NOTE]
+> Add Time Period in JSON
 
 ## Additional
 
 | Field                  | Input Type     | Options / Values                                                                  | Required | Conditional        |
 | ---------------------- | -------------- | --------------------------------------------------------------------------------- | -------- | ------------------ |
 | Occupation             | Dropdown       | Office Work / On-Field Work / Student / Homemaker / Retired / Manual Work / Other | Yes      | —                  |
-| Other Occupation       | Text Input     | Specify occupation                                                                | Yes*     | Occupation = Other |
-| City / State  | Location Input | City / State                                                            | Yes      | —                  |
+| **Other Occupation**       | Text Input     | Specify occupation                                                                | Yes*     | Occupation = Other |
+| City / State  | Location Input(Text) | City / State                                                            | Yes      | —                  |
+
+> [!NOTE]
+> Add Other Occupation in JSON
 
 ---
 
@@ -55,8 +61,12 @@ Basic Details → Medical History → Goals → Food Habits → Allergies / Into
 | Field            | Input Type   | Options / Values                                                                                                        | Required | Conditional              |
 | ---------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------- | -------- | ------------------------ |
 | Current Symptoms | Multi-select | Fatigue / Acidity / Constipation / Diarrhea / Bloating / Headache / Dizziness / Nausea / Appetite Change / Other / None | Yes      | —                        |
-| Other Symptom    | Text Input   | Specify symptom                                                                                                         | Yes*     | Current Symptoms = Other |
+| **Other Symptom**    | Text Input   | Specify symptom                                                                                                         | Yes*     | Current Symptoms = Other |
 | Symptom Duration | Dropdown     | <1 week / 1–4 weeks / 1–6 months / >6 months                                                                            | Yes*     | Current Symptoms ≠ None  |
+
+> [!NOTE]
+> Add Other Symptom in JSON
+
 
 ## Medication & Supplements
 
