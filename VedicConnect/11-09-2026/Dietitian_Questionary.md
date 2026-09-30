@@ -388,8 +388,6 @@ Basic Details → Medical History → Goals → Food Habits → Allergies / Into
 4. **Screen 4 — Food Habits**
 5. **Screen 5 — Allergies / Intolerances**
 6. **Screen 6 — Lifestyle / Activity**
-7. **Screen 7 — Review Answers**
-8. **Screen 8 — Submit & Confirmation**
 
 ---
 
